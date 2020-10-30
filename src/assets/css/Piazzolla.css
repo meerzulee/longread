@@ -1,0 +1,113 @@
+ 
+ @font-face {
+    font-family: 'Piazzolla';
+    font-weight: 100;
+    font-style: normal;
+    src: url('../fonts/Piazzolla/Piazzolla-Thin.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 100;
+    font-style: italic;
+    src: url('../fonts/Piazzolla/Piazzolla-ThinItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 200;
+    font-style: normal;
+    src: url('../fonts/Piazzolla/Piazzolla-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 200;
+    font-style: italic;
+    src: url('../fonts/Piazzolla/Piazzolla-ExtraLightItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../fonts/Piazzolla/Piazzolla-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 300;
+    font-style: italic;
+    src: url('../fonts/Piazzolla/Piazzolla-LightItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Piazzolla/Piazzolla-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 400;
+    font-style: italic;
+    src: url('../fonts/Piazzolla/Piazzolla-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../fonts/Piazzolla/Piazzolla-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 500;
+    font-style: italic;
+    src: url('../fonts/Piazzolla/Piazzolla-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 600;
+    font-style: normal;
+    src: url('../fonts/Piazzolla/Piazzolla-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 600;
+    font-style: italic;
+    src: url('../fonts/Piazzolla/Piazzolla-SemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/Piazzolla/Piazzolla-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 700;
+    font-style: italic;
+    src: url('../fonts/Piazzolla/Piazzolla-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 800;
+    font-style: normal;
+    src: url('../fonts/Piazzolla/Piazzolla-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 800;
+    font-style: italic;
+    src: url('../fonts/Piazzolla/Piazzolla-ExtraBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 900;
+    font-style: normal;
+    src: url('../fonts/Piazzolla/Piazzolla-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Piazzolla';
+    font-weight: 900;
+    font-style: italic;
+    src: url('../fonts/Piazzolla/Piazzolla-BlackItalic.ttf') format('truetype');
+}

@@ -1,13 +1,26 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-    <router-view />
+    <transition :name="transition">
+      <router-view />
+    </transition>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      transition: 'fade',
+    }
+  },
+  created() {
+    this.$router.beforeEach((to, from, next) => {
+      this.transition = to.params.transition ? to.params.transition : 'fade'
 
+      next()
+    })
+  },
+}
+</script>
 <style>
 #app {
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */
