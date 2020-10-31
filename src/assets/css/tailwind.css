@@ -14,6 +14,10 @@ html {
     max-width: 472px;
     max-height: 700px;
 }
+.story-half {
+  
+  max-height: 456px;
+}
 .navbar-menu{
   height: 800px;
   max-height: 800px;
@@ -30,7 +34,15 @@ html {
   width: 226px;
   height: 140px;
 }
-
+.outro-container{
+  max-width: 960px;
+}
+.modal{
+  width: 336px;
+height: 240px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
+border-radius: 4px;
+}
 .bg-text{
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 49.48%, rgba(0, 0, 0, 0) 100%);
 }
@@ -152,15 +164,7 @@ html {
 .menu-down-leave{
   transform: translateY(0%);
 }
-/* menu fade */
-.menu-fade-enter-active,
-.menu-fade-leave-active,
-{
-  transition: opacity 0.5s;
-}
-.menu-fade-enter, .menu-fade-leave-to {
-  opacity: 0;
-}
+
 /* scrollbar */
 /* width */
 ::-webkit-scrollbar {

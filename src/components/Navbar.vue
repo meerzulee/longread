@@ -32,6 +32,7 @@
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           class="mr-10 cursor-pointer"
+          :class="[end ? 'mr-20' : '']"
           @click="slideBack()"
         >
           <path
@@ -41,6 +42,7 @@
         </svg>
         <!--  -->
         <svg
+          :class="[end ? 'hidden' : 'block']"
           width="32"
           height="32"
           viewBox="0 0 32 32"
@@ -100,8 +102,8 @@
     </transition>
 
     <!-- bg-color -->
-    <transition name="menu-fade">
-      <div v-if="toggleMenu" class="w-full h-screen z-30 menu-mask"></div>
+    <transition name="fade" mode="in-out">
+      <div v-if="toggleMenu" class="w-full h-screen top-0 z-30 menu-mask"></div>
     </transition>
   </div>
 </template>
@@ -111,6 +113,7 @@ export default {
   data() {
     return {
       toggleMenu: false,
+
       items: [
         { text: 'Пролог', textHover: 'Пролог', image: '' },
         {
@@ -190,8 +193,9 @@ export default {
   props: {
     prev: { type: String, required: true },
     prevT: { type: String, required: true },
-    next: { type: String, required: true },
-    nextT: { type: String, required: true },
+    next: { type: String },
+    nextT: { type: String },
+    end: Boolean,
   },
   methods: {
     slideBack() {
@@ -210,5 +214,13 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style >
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1.7s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>

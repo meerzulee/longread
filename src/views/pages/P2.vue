@@ -1,35 +1,54 @@
 <template>
-  <div class="h-screen bg-gray-900 flex justify-center items-center">
-    <button
-      @click="slideBack()"
-      class="flex items-center justify-center px-10 py-5 text-lg font-semibold leading-relaxed bg-white mt-9 rounded-xl"
-    >
-      Back
-    </button>
-    <button
-      @click="slideNext()"
-      class="flex items-center justify-center px-10 py-5 text-lg font-semibold leading-relaxed bg-white mt-9 rounded-xl"
-    >
-      Next
-    </button>
+  <div class="h-screen bg-blue-900 relative flex justify-center">
+    <Navbar v-bind="navbar" />
+    <img
+      src="@/assets/images/backgrounds/02.png"
+      class="absolute object-cover w-full h-full"
+      alt=""
+    />
+
+    <div class="relative mt-12 ml-56">
+      <Header class="mb-12">
+        <template v-slot:name>Диана Алиева</template>
+        транс-активистка и активистка за права секс-работниц, разделяет идеи
+        феминизма и сестринства. Родилась и выросла в Кыргызстане. Сейчас живет
+        в России
+      </Header>
+      <Story :storyText="storyText" />
+    </div>
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header.vue'
+import Story from '@/components/Story.vue'
+import Navbar from '@/components/Navbar.vue'
 export default {
-  methods: {
-    slideBack() {
-      this.$store.commit('setPageTransition', 'slide-right')
-      this.$router.push({
-        name: 'Page1',
-      })
-    },
-    slideNext() {
-      this.$store.commit('setPageTransition', 'slide-left')
-      this.$router.push({
-        name: 'Intro',
-      })
-    },
+  components: { Header, Story, Navbar },
+  data() {
+    return {
+      navbar: {
+        prev: 'Page1',
+        prevT: 'slide-right',
+        next: 'Page3',
+        nextT: 'slide-left',
+      },
+      storyText: `- Заниматься секс-работой - это был мой осознанный выбор. К этому я отношусь как к полноценной работе. Да, там деньги - не легкие деньги, но быстрые. 
+
+И потом, все это происходило одновременно с гормонотерапией. Я понимала, что это и возможность привыкнуть к своему телу, и это придавало уверенности. Я познавала свое тело, женскую сексуальность. 
+
+Я увидела в этом плюсы, но не учла все риски. Секс-работа может затянуть, начинаются стрессы. Это наркотики, алкоголь, клиенты. Это замкнутый круг. 
+
+Мне было комфортнее принимать мужчин. Разного возраста, разного социального положения, разной ориентации, разной гендерной идентичности. Но в основном я принимала мужчин, которые себя позиционировали, как мужчины гетеросексуальной ориентации. 
+
+Если клиент был более или менее разговорчивый, то я у них спрашивал: «Зачем? Как вы поняли что вы хотите транса?». Многие говорили, что хотели попробовать анальный секс. Но ходить к цис-женщинам и сказать им, что они хотят попробовать анал или чтобы их страпоном... они стесняются. А тут транс-девочки - идеальный вариант. Они и внешне феминные девочки, плюс анальный секс могут им дать.
+
+- Ощущали ли вы разницу в этой сфере с точки зрения трудностей в Москве и Бишкеке?
+
+- Разница знаете в чем - в менталитете. В Кыргызстане мужчины более патриархальные. Они к секс-работнице относятся как к объекту, как к мясу. «Я тебе деньги плачу. Ты моя, ты вот это делай». Он тебя выебал, свою потребность сексуальную удовлетворил и ушел. В Москве с большим уважением относятся. Спрашивают даже: «Что ты хочешь?»
+
+В Москве мы иногда ходим в гей-клубы. Там очень хорошо, потому что никто к тебе не пристает. На секс-работе устаешь от излишнего внимания и что тебя воспринимают как сексуальный объект. Раз в месяц можно пойти и отдохнуть - потанцевать, выпить без приключений.`,
+    }
   },
 }
 </script>

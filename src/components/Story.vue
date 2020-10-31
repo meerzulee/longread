@@ -1,5 +1,11 @@
 <template>
-  <div class="story overflow-y-scroll p-8 bg-text">
+  <div
+    class="story p-8 bg-text"
+    :class="[
+      maxLimitMini ? 'story-half' : '',
+      noScroll ? 'overflow-y-hidden' : 'overflow-y-scroll ',
+    ]"
+  >
     <p
       class="text-lg font-normal whitespace-pre-line leading-9 tracking-wider text-left text-white"
       v-html="storyText"
@@ -13,6 +19,7 @@ export default {
     storyText: String,
     maxLimit: Boolean,
     maxLimitMini: Boolean,
+    noScroll: Boolean,
   },
 }
 </script>

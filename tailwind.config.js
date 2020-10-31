@@ -11,8 +11,11 @@ module.exports = {
       spacing: {
         '9': '2.25rem',
         '14': '3.5rem',
+
         '30r': '30rem',
-        '47.5': '47.5rem'
+        '47.5': '47.5rem',
+        '360p': '360px'
+
       },
       borderRadius: {
         'xl': '0.75rem'
@@ -35,7 +38,7 @@ module.exports = {
   },
   variants: {
     display: ['responsive', 'hover', 'group-hover'],
-
+    backgroundColor: ['responsive', 'hover', 'focus', 'active', 'group-hover']
   },
   plugins: [],
 }

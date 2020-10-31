@@ -2,7 +2,7 @@
   <div class="h-screen bg-blue-900 relative flex justify-center">
     <Navbar v-bind="navbar" />
     <img
-      src="@/assets/images/p1-bg.png"
+      src="@/assets/images/backgrounds/01.png"
       class="absolute object-cover w-full h-full"
       alt=""
     />
