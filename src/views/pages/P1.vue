@@ -1,35 +1,45 @@
 <template>
-  <div class="h-screen bg-blue-900 flex justify-center items-center">
-    <button
-      @click="slideBack()"
-      class="flex items-center justify-center px-10 py-5 text-lg font-semibold leading-relaxed bg-white mt-9 rounded-xl"
-    >
-      Back
-    </button>
-    <button
-      @click="slideNext()"
-      class="flex items-center justify-center px-10 py-5 text-lg font-semibold leading-relaxed bg-white mt-9 rounded-xl"
-    >
-      Next
-    </button>
+  <div class="h-screen bg-blue-900 relative flex justify-center">
+    <Navbar v-bind="navbar" />
+    <img
+      src="@/assets/images/p1-bg.png"
+      class="absolute object-cover w-full h-full"
+      alt=""
+    />
+
+    <div class="relative mt-12">
+      <Header class="mb-12">
+        <template v-slot:name>Женя Юрьевна</template>
+        со-основательница и учредительница ЛГБТ-бара в Бишкеке, цисгендерная
+        женщина, лесбиянка, 32 года
+      </Header>
+      <Story :storyText="storyText" />
+    </div>
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header.vue'
+import Story from '@/components/Story.vue'
+import Navbar from '@/components/Navbar.vue'
 export default {
-  methods: {
-    slideBack() {
-      this.$store.commit('setPageTransition', 'slide-down')
-      this.$router.push({
-        name: 'Intro',
-      })
-    },
-    slideNext() {
-      this.$store.commit('setPageTransition', 'slide-left')
-      this.$router.push({
-        name: 'Page2',
-      })
-    },
+  components: { Header, Story, Navbar },
+  data() {
+    return {
+      navbar: {
+        prev: 'Intro',
+        prevT: 'slide-down',
+        next: 'Page2',
+        nextT: 'slide-left',
+      },
+      storyText: `  - Мы открывали бар для друзей и для своих. А когда в день открытия произошли 11 драк, я такая: «Я не хочу в этом быть. Почему это вообще происходит?». Так недельку продолжалось. А потом мы поговорили со знакомой и она сказала: «Ну ты же понимаешь, почему эти драки? Люди получают на улице всю эту ненависть и злость, и приходят сюда с этим». Тогда мне стало понятно. Это не потому, что они просто так себя безобразно ведут, а у этого есть причина.
+
+Что касается музыки в клубе, то я поняла, что никому не угожу после одной истории. Ко мне подошла девушка и сказала: «Слушай, поставь песню такую веселую, чтобы танцевать хотелось». Я ответила: «Ну, какую?». Обычно никто не отвечает на этот вопрос, а она сказала: «Ну, такую, чтобы прям, вот прям от души потанцевать». Я: «Какую?», а она: «Ну, вот "Бутырку" поставь!». И я все поняла, у меня произошел инсайт - кто-то хочет танцевать под «Бутырку», кто-то под Аллегрову, кто-то под Linkin Park. Я не угожу. Поэтому в клубе играют песни, которые на данный момент популярны и которые когда-то были популярны. 
+
+Все почему-то считают, что настоящие геи в перьях в жопе ходят и с боа. У нас же так и было в «Аутриче», когда к нам 30 мужиков пришли. Они такие: «Мы зайдем!». Я говорю: «Зачем?». Потом пришел милиционер: «Они хотят зайти». Ну, а что уже делать? Уже милиционер говорит, что они хотят зайти. Я говорю: «Только один человек». Они: «Два». Ну ладно выторговали два. 
+
+Зашли, выходят: «Ну там бар, там стулья стоят, столы…» И разошлись. Я потом милиционера спрашиваю: «А что они ожидали там увидеть?». Он говорит: «Ну, честно, я тоже ожидал там что-то другое увидеть». Они ожидали там увидеть подвешенных видимо детей, кровати, оргии. Потому что представление об ЛГБТ такое, что они все время ебутся и всех ебать хотят. `,
+    }
   },
 }
 </script>
