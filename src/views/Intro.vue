@@ -1,12 +1,13 @@
 <template>
-  <div class="relative h-screen intro">
+  <div class="home h-screen bg-teal-600 relative">
     <img
       src="@/assets/images/intro.png"
-      class="absolute z-10 object-cover w-full h-full"
+      class="absolute object-cover w-full h-full"
       alt=""
     />
+
     <div
-      class="absolute bottom-0 right-0 z-20 flex flex-col items-center mb-14 w-30r mr-30r"
+      class="absolute bottom-0 right-0 flex flex-col items-center mb-14 w-30r mr-30r"
     >
       <p
         class="p-8 text-2xl font-bold leading-9 tracking-wider text-left text-white bg-text"
@@ -17,24 +18,27 @@
         открыть дверь немного сильнее подтолкните. В воздухе пахнет дымом,
         разными духами и алкоголем…
       </p>
-      <router-link
-        :to="{ name: 'Page1', params: { transition: 'slide-up' } }"
+      <button
+        @click="slideUp()"
         class="flex items-center justify-center px-10 py-5 text-lg font-semibold leading-relaxed bg-white mt-9 rounded-xl"
       >
         Продолжить
-      </router-link>
+      </button>
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    // HelloWorld,
+  methods: {
+    slideUp() {
+      this.$store.commit('setPageTransition', 'slide-up')
+      this.$router.push({
+        name: 'Page1',
+      })
+    },
   },
 }
 </script>
+<style >
+</style>
