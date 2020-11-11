@@ -3,6 +3,9 @@
 html {
     @apply font-body;
 }
+html{
+  margin: 0
+}
 @tailwind components;
     
 @tailwind utilities;
