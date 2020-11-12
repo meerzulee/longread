@@ -31,7 +31,7 @@
       </div>
       <div class="group relative flex flex-col">
         <div
-          class="absolute bottom-0 modal py-5 px-3 mb-10 hidden group-hover:block bg-white text-sm leading-loose text-primary-dark whitespace-pre-line"
+          class="absolute bottom-0 modal overflow-y-scroll py-5 px-3 mb-10 hidden group-hover:block bg-white text-sm leading-loose text-primary-dark whitespace-pre-line"
           v-html="modalText2"
         ></div>
 
