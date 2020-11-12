@@ -1,14 +1,34 @@
 <template>
   <div class="h-screen bg-primary-darker relative flex justify-center">
     <Navbar v-bind="navbar" end />
-    <div class="outro-container mt-20 text-white">
+    <div class="outro-container overflow-y-scroll pr-10 mt-20 text-white">
       <p class="text-xl font-normal whitespace-pre-line" v-html="outroText"></p>
+      <div class="flex my-24">
+        <div
+          class="w-1/4 h-56"
+          v-for="(x, index) in ['Sveta', 'Maya', 'Tal', 'Diana']"
+          :key="index"
+        >
+          <video
+            :src="require(`@/assets/videos/outro/${x}.webm`)"
+            class="h-56"
+            autoplay
+            loop
+          ></video>
+        </div>
+      </div>
+      <h1 class="text-4xl font-bold mt-10 mb-16">Участники проекта</h1>
+      <p
+        class="text-xl font-normal whitespace-pre-line mb-32"
+        v-html="teamInfo"
+      ></p>
     </div>
   </div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar.vue'
+
 export default {
   components: { Navbar },
   data() {
@@ -30,6 +50,17 @@ export default {
 Отобранные части интервью нам кажутся уникальными, передающими индивидуальность каждого, мир героя и его самобытность. Но несмотря на их различия, в материале все же присутствует атмосферная визуальная линия, объединяющая их всех, - это пространство. 
 
 Места (офис, гей-клуб, дом, бар), где каждый из них порой уединяется, чувствует свой мир, может быть свободным и самим собой.`,
+      teamInfo: `Творческая группа 705: (Талгат Бериков - (работа с видео), Светлана Зеленская - (фотодокументация), Диана Рахманова (интервьюирование, работа с текстом). 
+
+Майя Абдылдаева (фиксерка, консультантка)
+
+Алмаз Исаков (дизайн, верстка)
+
+Нурсултан Манасов (анимация)
+
+Выражаем благодарность всем героям проекта, а также художественному коллективу «Managua Furiosa», Майе Абдылдаевой, Диане Ухиной, Алмазу Исакову и ОсОО "Фриланс Кей Джи".
+
+Финансовая поддержка проекта: Фонд Принца Клауса`,
     }
   },
 }

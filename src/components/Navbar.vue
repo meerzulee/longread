@@ -68,6 +68,7 @@
           <div
             class="navbar-rect my-10 mx-2 cursor-pointer group rounded-md text-white hover:bg-secondary flex justify-center items-center"
             v-for="(item, index) in items"
+            @click="navigateTo(item.link)"
             :key="index"
           >
             <img class="group-hover:hidden" :src="item.image" alt="" />
@@ -115,78 +116,92 @@ export default {
       toggleMenu: false,
 
       items: [
-        { text: 'Пролог', textHover: 'Пролог', image: '' },
+        { text: 'Пролог', textHover: 'Пролог', image: '', link: 'Intro' },
         {
           text: '',
           textHover: 'Женя Юрьевна',
           image: require('@/assets/images/thumbnails/01.png'),
+          link: 'Page1',
         },
         {
           text: '',
           textHover: 'Женя Юрьевна',
           image: require('@/assets/images/thumbnails/02.png'),
+          link: 'Page2',
         },
         {
           text: '',
           textHover: 'Женя Юрьевна',
           image: require('@/assets/images/thumbnails/03.png'),
+          link: 'Page3',
         },
         {
           text: '',
           textHover: 'Женя Юрьевна',
           image: require('@/assets/images/thumbnails/04.png'),
+          link: 'Page4',
         },
         {
           text: '',
           textHover: 'Женя Юрьевна',
           image: require('@/assets/images/thumbnails/05.png'),
+          link: 'Page5',
         },
         {
           text: '',
           textHover: 'Женя Юрьевна',
           image: require('@/assets/images/thumbnails/06.png'),
+          link: 'Page6',
         },
         {
           text: '',
           textHover: 'Женя Юрьевна',
           image: require('@/assets/images/thumbnails/07.png'),
+          link: 'Page7',
         },
         {
           text: '',
           textHover: 'Женя Юрьевна',
           image: require('@/assets/images/thumbnails/08.png'),
+          link: 'Page8',
         },
         {
           text: '',
           textHover: 'Женя Юрьевна',
           image: require('@/assets/images/thumbnails/09.png'),
+          link: 'Page9',
         },
-        {
-          text: '',
-          textHover: 'Женя Юрьевна',
-          image: require('@/assets/images/thumbnails/09.png'),
-        },
+
         {
           text: '',
           textHover: 'Женя Юрьевна',
           image: require('@/assets/images/thumbnails/10.png'),
+          link: 'Page10',
         },
         {
           text: '',
           textHover: 'Женя Юрьевна',
           image: require('@/assets/images/thumbnails/11.png'),
+          link: 'Page11',
         },
         {
           text: '',
           textHover: 'Женя Юрьевна',
           image: require('@/assets/images/thumbnails/12.png'),
+          link: 'Page12',
         },
         {
           text: '',
           textHover: 'Женя Юрьевна',
           image: require('@/assets/images/thumbnails/13.png'),
+          link: 'Page13',
         },
-        { text: 'Заключение', textHover: 'Заключение', image: '' },
+        {
+          text: 'Заключение',
+          textHover: 'Заключение',
+          image: '',
+          link: 'Outro',
+        },
       ],
     }
   },
@@ -209,6 +224,14 @@ export default {
       this.$router.push({
         name: this.next,
       })
+    },
+    navigateTo(link) {
+      this.toggleMenu = !this.toggleMenu
+      setTimeout(() => {
+        this.$router.push({
+          name: link,
+        })
+      }, 500)
     },
   },
 }
