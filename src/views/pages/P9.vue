@@ -6,7 +6,13 @@
       class="absolute object-cover w-full h-full"
       alt=""
     />
-
+    <video
+      loop
+      autoplay
+      src="@/assets/videos/09.webm"
+      class="absolute object-cover w-full h-full"
+      alt=""
+    />
     <div class="relative mt-12 mr-56">
       <Header class="mb-12">
         <template v-slot:name>Аскар</template>

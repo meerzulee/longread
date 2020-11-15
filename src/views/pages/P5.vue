@@ -6,7 +6,13 @@
       class="absolute object-cover w-full h-full"
       alt=""
     />
-
+    <video
+      loop
+      autoplay
+      src="@/assets/videos/05.webm"
+      class="absolute object-cover w-full h-full"
+      alt=""
+    />
     <div class="relative mt-12 mr-64 pr-32">
       <Header class="mb-12">
         <template v-slot:name>Диас</template>

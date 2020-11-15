@@ -6,7 +6,13 @@
       class="absolute object-cover w-full h-full"
       alt=""
     />
-
+    <video
+      loop
+      autoplay
+      src="@/assets/videos/12.webm"
+      class="absolute object-cover w-full h-full"
+      alt=""
+    />
     <div class="relative mt-12 mr-64 pr-56">
       <Header class="mb-12">
         <template v-slot:name
@@ -19,7 +25,7 @@
     <div class="absolute z-30 bottom-0 left-1/2 mb-20 ml-8 text-white">
       <div class="group relative mb-10 flex flex-col">
         <div
-          class="absolute bottom-0 modal py-5 px-3 mb-10 hidden group-hover:block bg-white text-xs leading-relaxed text-primary-dark whitespace-pre-line"
+          class="absolute bottom-0 modal overflow-y-scroll py-5 px-3 mb-10 hidden group-hover:block bg-white text-xs leading-loose text-primary-dark whitespace-pre-line"
           v-html="modalText1"
         ></div>
 
@@ -29,14 +35,16 @@
           О чем статья о мужеложестве?
         </p>
       </div>
-      <div class="group relative flex flex-col">
+      <div class="relative focus flex flex-col">
         <div
-          class="absolute bottom-0 modal overflow-y-scroll py-5 px-3 mb-10 hidden group-hover:block bg-white text-sm leading-loose text-primary-dark whitespace-pre-line"
+          class="absolute bottom-0 modal overflow-y-scroll py-5 px-3 mb-10 bg-white text-sm leading-loose text-primary-dark whitespace-pre-line"
           v-html="modalText2"
+          :class="[mt1 ? 'block' : 'hidden']"
         ></div>
 
         <p
-          class="group-hover:bg-secondary cursor-pointer w-auto rounded-full py-1 px-3"
+          @click="mt1 = !mt1"
+          class="hover:bg-secondary cursor-pointer w-auto rounded-full py-1 px-3"
         >
           Что случилось на марше 8 марта 2019?
         </p>
@@ -51,6 +59,12 @@ import Story from '@/components/Story.vue'
 import Navbar from '@/components/Navbar.vue'
 export default {
   components: { Header, Story, Navbar },
+
+  methods: {
+    hide() {
+      this.mt1 = !this.mt1
+    },
+  },
   data() {
     return {
       navbar: {
@@ -59,6 +73,9 @@ export default {
         next: 'Page13',
         nextT: 'slide-left',
       },
+      mt1: false,
+      mt2: false,
+
       modalText2: `8 марта 2019 года в центре Бишкека проходил мирный марш солидарности за права женщин. В акции участвовало около 400 человек. Многих возмутило, что в марше участвовали ЛГБТ-люди с радужной символикой и лозунгами. На что правозащитники ЛГБТ-сообщества пояснили, что права женщин напрямую связаны с правами лесбиянок, бисексуалок и транс-женщин. Движение «Кыргыз Чоролору» (более известное как «Кырк Чоро») тогда потребовало отставки мэра, а также обратилось в Генпрокуратуру за тем, чтобы участников марша привлекли к ответственности.`,
       modalText1: `В Уголовном Кодексе СССР от 1933 года была статья «О мужеложестве», которая, впоследствии распространилась на другие советские республики. На данный момент такая статья есть в Уголовных Кодексах Республики Узбекистан (120 статья) и Республики Таджикистан (139 - 141 статья).
 

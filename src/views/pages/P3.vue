@@ -6,7 +6,13 @@
       class="absolute object-cover w-full h-full"
       alt=""
     />
-
+    <video
+      loop
+      autoplay
+      src="@/assets/videos/03.webm"
+      class="absolute object-cover w-full h-full"
+      alt=""
+    />
     <div class="relative mt-12 mr-64 pr-56 flex flex-col justify-between">
       <Header>
         <template v-slot:name>Наталья Викторовна</template>

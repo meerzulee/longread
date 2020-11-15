@@ -9,7 +9,7 @@
     <video
       loop
       autoplay
-      src="@/assets/videos/03.webm"
+      src="@/assets/videos/02.webm"
       class="absolute object-cover w-full h-full"
       alt=""
     />
