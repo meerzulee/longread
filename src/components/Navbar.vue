@@ -208,12 +208,11 @@ export default {
       ],
     }
   },
-  props: {
-    // prev: { type: String, required: true },
-    // prevT: { type: String, required: true },
-    // next: { type: String },
-    // nextT: { type: String },
-    // end: Boolean,
+  mounted() {
+    window.addEventListener('keyup', this.handleKeyUp)
+  },
+  destroyed() {
+    window.removeEventListener('keyup', this.handleKeyUp)
   },
   computed: {
     prev() {
@@ -274,6 +273,23 @@ export default {
           name: link,
         })
       }, 500)
+    },
+    handleKeyUp() {
+      // Page up
+      if (event.keyCode === 37 && this.$route.name !== 'Intro') {
+        this.slideBack()
+
+        return
+      }
+
+      // Page down
+      if (
+        event.keyCode === 39 &&
+        this.$route.name !== 'Outro' &&
+        this.$route.name !== 'Intro'
+      ) {
+        this.slideNext()
+      }
     },
   },
 }

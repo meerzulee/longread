@@ -193,3 +193,10 @@ border-radius: 4px;
   ::-webkit-scrollbar-thumb:hover {
     background: #12071667; 
   }
+body{
+  scrollbar-color: #9da2a8 #C2D2E4;
+  scrollbar-width: thin;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
