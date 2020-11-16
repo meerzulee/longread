@@ -289,8 +289,6 @@ export default {
       // Page up
       if (event.keyCode === 37 && this.$route.name !== 'Intro') {
         this.slideBack()
-
-        return
       }
 
       // Page down

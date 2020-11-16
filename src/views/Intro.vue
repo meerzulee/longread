@@ -30,12 +30,23 @@
 
 <script>
 export default {
+  mounted() {
+    window.addEventListener('keyup', this.start)
+  },
+  destroyed() {
+    window.removeEventListener('keyup', this.start)
+  },
   methods: {
     slideUp() {
       this.$store.commit('setPageTransition', 'slide-up')
       this.$router.push({
         name: 'Page1',
       })
+    },
+    start() {
+      if (event.keyCode === 38) {
+        this.slideUp()
+      }
     },
   },
 }

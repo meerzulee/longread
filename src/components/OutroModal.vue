@@ -54,6 +54,19 @@ export default {
       toggleModal: false,
     }
   },
+  methods: {
+    closeModal() {
+      if (event.keyCode === 40) {
+        this.toggleModal = false
+      }
+    },
+  },
+  mounted() {
+    window.addEventListener('keyup', this.closeModal)
+  },
+  destroyed() {
+    window.removeEventListener('keyup', this.closeModal)
+  },
 }
 </script>
 
