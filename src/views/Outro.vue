@@ -2,20 +2,7 @@
   <div class="h-screen bg-primary-darker relative flex justify-center">
     <div class="outro-container overflow-y-scroll pr-10 mt-20 text-white">
       <p class="text-xl font-normal whitespace-pre-line" v-html="outroText"></p>
-      <div class="flex my-24">
-        <div
-          class="w-1/4 h-56"
-          v-for="(x, index) in ['Sveta', 'Maya', 'Tal', 'Diana']"
-          :key="index"
-        >
-          <video
-            :src="require(`@/assets/videos/outro/${x}.webm`)"
-            class="h-56"
-            autoplay
-            loop
-          ></video>
-        </div>
-      </div>
+      <OutroTeam />
       <h1 class="text-4xl font-bold mt-10 mb-16">Участники проекта</h1>
       <p
         class="text-xl font-normal whitespace-pre-line mb-32"
@@ -26,7 +13,11 @@
 </template>
 
 <script>
+import OutroTeam from '@/components/OutroTeam.vue'
 export default {
+  components: {
+    OutroTeam,
+  },
   data() {
     return {
       navbar: {
