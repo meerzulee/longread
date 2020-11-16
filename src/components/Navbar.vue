@@ -1,5 +1,8 @@
 <template>
-  <div class="fixed z-50 w-full top-0 left-0 right-0">
+  <div
+    v-if="this.$route.name !== 'Intro'"
+    class="fixed z-50 w-full top-0 left-0 right-0"
+  >
     <div class="pt-2 flex justify-between px-4">
       <svg
         width="32"
@@ -206,16 +209,50 @@ export default {
     }
   },
   props: {
-    prev: { type: String, required: true },
-    prevT: { type: String, required: true },
-    next: { type: String },
-    nextT: { type: String },
-    end: Boolean,
+    // prev: { type: String, required: true },
+    // prevT: { type: String, required: true },
+    // next: { type: String },
+    // nextT: { type: String },
+    // end: Boolean,
   },
   computed: {
-    // prev() {
-    //   return this.data
-    // },
+    prev() {
+      if (this.$route.name === 'Page1') {
+        return 'Intro'
+      } else if (this.$route.name === 'Outro') {
+        return 'Page13'
+      } else {
+        return `Page${this.$route.name.split('Page')[1] - 1}`
+      }
+    },
+    prevT() {
+      if (this.$route.name === 'Page1') {
+        return 'slide-down'
+      } else {
+        return 'slide-right'
+      }
+    },
+    next() {
+      if (parseInt(this.$route.name.split('Page')[1]) + 1 < 14) {
+        return `Page${parseInt(this.$route.name.split('Page')[1]) + 1}`
+      } else {
+        return 'Outro'
+      }
+    },
+    nextT() {
+      if (this.$route.name === 'Outro') {
+        return ''
+      } else {
+        return 'slide-left'
+      }
+    },
+    end() {
+      if (this.$route.name === 'Outro') {
+        return true
+      } else {
+        return false
+      }
+    },
   },
   methods: {
     slideBack() {

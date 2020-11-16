@@ -1,6 +1,5 @@
 <template>
   <div class="h-screen bg-blue-900 relative flex justify-center">
-    <Navbar v-bind="navbar" />
     <img
       src="@/assets/images/backgrounds/12.png"
       class="absolute object-cover w-full h-full"
@@ -56,9 +55,8 @@
 <script>
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
-import Navbar from '@/components/Navbar.vue'
 export default {
-  components: { Header, Story, Navbar },
+  components: { Header, Story },
 
   methods: {
     hide() {
@@ -67,12 +65,6 @@ export default {
   },
   data() {
     return {
-      navbar: {
-        prev: 'Page11',
-        prevT: 'slide-right',
-        next: 'Page13',
-        nextT: 'slide-left',
-      },
       mt1: false,
       mt2: false,
 

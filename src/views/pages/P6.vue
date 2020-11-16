@@ -1,6 +1,5 @@
 <template>
   <div class="h-screen bg-blue-900 relative flex justify-start">
-    <Navbar v-bind="navbar" />
     <img
       src="@/assets/images/backgrounds/06.png"
       class="absolute object-cover w-full h-full"
@@ -26,17 +25,10 @@
 <script>
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
-import Navbar from '@/components/Navbar.vue'
 export default {
-  components: { Header, Story, Navbar },
+  components: { Header, Story },
   data() {
     return {
-      navbar: {
-        prev: 'Page5',
-        prevT: 'slide-right',
-        next: 'Page7',
-        nextT: 'slide-left',
-      },
       storyText: `- Сколько примерно к вам поступает просьб о помощи в  месяц?
 
 - Ну, больше десяти точно, в зависимости от времени. Потому что если это окончание квартала, то милиция начинает вымогать деньги. Также больше задержаний происходит, к примеру, в какие-то предпраздничные дни. Я могу уже предположить, что такой-то день будут задержания, будут останавливать на улице и проверять документы. 

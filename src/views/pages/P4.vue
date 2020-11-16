@@ -1,6 +1,5 @@
 <template>
   <div class="h-screen bg-blue-900 relative flex justify-center">
-    <Navbar v-bind="navbar" />
     <img
       src="@/assets/images/backgrounds/04.png"
       class="absolute object-cover w-full h-full"
@@ -26,17 +25,10 @@
 <script>
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
-import Navbar from '@/components/Navbar.vue'
 export default {
-  components: { Header, Story, Navbar },
+  components: { Header, Story },
   data() {
     return {
-      navbar: {
-        prev: 'Page3',
-        prevT: 'slide-right',
-        next: 'Page5',
-        nextT: 'slide-left',
-      },
       storyText: `- Я не хожу на служения в церковь уже много-много лет. На это были разные причины – учеба не позволяла, потом работа. Я не хочу превращать свою жизнь в кучу ритуалов, не хочу становиться религиозной в не очень хорошем смысле этого слова, когда это превращается в автоматизм. Для меня это личное и интимное. Я хочу делать это осознанно. 
 
 У нас есть прославление и там много прикольных песен. Я даже могу не молиться, но я пою песни, в основном стихи из Библии. На музыкальный лад легче воспринимается.  

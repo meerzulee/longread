@@ -1,6 +1,5 @@
 <template>
   <div class="h-screen bg-blue-900 relative flex justify-end">
-    <Navbar v-bind="navbar" />
     <img
       src="@/assets/images/backgrounds/05.png"
       class="absolute object-cover w-full h-full"
@@ -26,17 +25,10 @@
 <script>
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
-import Navbar from '@/components/Navbar.vue'
 export default {
-  components: { Header, Story, Navbar },
+  components: { Header, Story },
   data() {
     return {
-      navbar: {
-        prev: 'Page4',
-        prevT: 'slide-right',
-        next: 'Page6',
-        nextT: 'slide-left',
-      },
       storyText: ` Когда люди не понимали кто я, они сразу же смотрели на грудь. Они считывали меня как девушку - это то с чем я сталкивался и почему удалил грудь.    
 
 В подростковом периоде, когда начинает расти грудь, транс-мужчины не хотят чтобы она росла, возникает ненависть к ней. Есть ненависть к гениталиям, но у всех транс-людей это по-разному. В моем случае - я не хочу делать операцию на гениталии, потому что это будет как что-то неживое. Я не хочу терять чувствительность там, лишаться того, от чего я получаю удовольствие.

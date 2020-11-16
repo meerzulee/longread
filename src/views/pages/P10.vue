@@ -1,6 +1,5 @@
 <template>
   <div class="h-screen bg-blue-900 relative flex justify-center">
-    <Navbar v-bind="navbar" />
     <img
       src="@/assets/images/backgrounds/10.png"
       class="absolute object-cover w-full h-full"
@@ -26,17 +25,10 @@
 <script>
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
-import Navbar from '@/components/Navbar.vue'
 export default {
-  components: { Header, Story, Navbar },
+  components: { Header, Story },
   data() {
     return {
-      navbar: {
-        prev: 'Page9',
-        prevT: 'slide-right',
-        next: 'Page11',
-        nextT: 'slide-left',
-      },
       storyText: `- Мы открыли заведение «Аутрич» и проработали три месяца в этом районе. За это время пережили просто невероятное количество насилия, драк среди своих же, внутри сообщества. У нас во время открытия было 11 драк, одна пробитая голова и одна сломанная нога. Это травмировало нас. 
 
 Через три месяца мы закрылись, после того, как на нас напали - 30 мужчин, вооруженных камнями и ножами. Нам удалось закрыть дверь с обратной стороны, потому что внутри находились люди. 

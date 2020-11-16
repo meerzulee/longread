@@ -1,6 +1,5 @@
 <template>
   <div class="h-screen bg-blue-900 relative flex justify-end">
-    <Navbar v-bind="navbar" />
     <img
       src="@/assets/images/backgrounds/07.png"
       class="absolute object-cover w-full h-full"
@@ -27,17 +26,10 @@
 <script>
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
-import Navbar from '@/components/Navbar.vue'
 export default {
-  components: { Header, Story, Navbar },
+  components: { Header, Story },
   data() {
     return {
-      navbar: {
-        prev: 'Page6',
-        prevT: 'slide-right',
-        next: 'Page8',
-        nextT: 'slide-left',
-      },
       storyText: `- Каждый год мы стараемся, чтобы в академии МВД все курсанты проходили модуль по работе с ЛГБТ-сообществом. Конечно, не всегда получается. 
 
 Им конечно тяжело дается. Ну, вы представляете таргет-группа академии МВД – это, в основном, приезжие ребята из регионов. И они никогда, ни под каким предлогом не сталкивались с сексуальностью. Для них есть черное и белое, для них есть роль женщины и роль мужчины - все такое супер-бинарное. И, когда мы приходим и начинаем рассказывать то, что не входит в их рамки восприятия мира, им это очень сложно дается. 

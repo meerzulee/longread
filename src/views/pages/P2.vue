@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen bg-blue-900 relative flex justify-center">
-    <Navbar v-bind="navbar" />
+    <!--  -->
     <img
       src="@/assets/images/backgrounds/02.png"
       class="absolute object-cover w-full h-full"
@@ -29,17 +29,10 @@
 <script>
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
-import Navbar from '@/components/Navbar.vue'
 export default {
-  components: { Header, Story, Navbar },
+  components: { Header, Story },
   data() {
     return {
-      navbar: {
-        prev: 'Page1',
-        prevT: 'slide-right',
-        next: 'Page3',
-        nextT: 'slide-left',
-      },
       storyText: `- Заниматься секс-работой - это был мой осознанный выбор. К этому я отношусь как к полноценной работе. Да, там деньги - не легкие деньги, но быстрые. 
 
 И потом, все это происходило одновременно с гормонотерапией. Я понимала, что это и возможность привыкнуть к своему телу, и это придавало уверенности. Я познавала свое тело, женскую сексуальность. 

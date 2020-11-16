@@ -1,6 +1,5 @@
 <template>
   <div class="h-screen bg-blue-900 relative flex justify-center">
-    <Navbar v-bind="navbar" />
     <img
       src="@/assets/images/backgrounds/03.png"
       class="absolute object-cover w-full h-full"
@@ -26,17 +25,10 @@
 <script>
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
-import Navbar from '@/components/Navbar.vue'
 export default {
-  components: { Header, Story, Navbar },
+  components: { Header, Story },
   data() {
     return {
-      navbar: {
-        prev: 'Page2',
-        prevT: 'slide-right',
-        next: 'Page4',
-        nextT: 'slide-left',
-      },
       storyText: `- Помню, я брала своего сына в лагерь на тренинги по ЛГБТ. Позже он сказал мне, что он трансгендер. Потом, что, наверное, он гей. И я себя поймала на мысли, что я испугалась: таскаю ребенка везде и, вот, теперь. Мне с трудом удалось себя остановить. 
 
 Я провела несколько ужасных дней сама с собой, потом подумала: «Боже мой, что я делаю? Это все тот же мой ребенок, он никак не изменился, ничего не произошло. Я что оставлю его сейчас один на один с этими непонятными переживаниями?» Ему тогда было 11 лет. 

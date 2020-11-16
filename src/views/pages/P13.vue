@@ -1,6 +1,5 @@
 <template>
   <div class="h-screen relative flex justify-center">
-    <Navbar v-bind="navbar" />
     <img
       src="@/assets/images/backgrounds/13.png"
       class="absolute object-cover w-full h-full"
@@ -28,17 +27,10 @@
 <script>
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
-import Navbar from '@/components/Navbar.vue'
 export default {
-  components: { Header, Story, Navbar },
+  components: { Header, Story },
   data() {
     return {
-      navbar: {
-        prev: 'Page12',
-        prevT: 'slide-right',
-        next: 'Outro',
-        nextT: 'slide-left',
-      },
       storyText: `Про офис и безопасное пространство  
 
 Я бы так сказал, если я живу 25 % времени с семьей, а 75 % - с инициативной группой, то несмотря на то, сколько лет я женат, я больше живу сообществом. Да, есть любовь к семье, но не такая как к сообществу.

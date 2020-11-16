@@ -1,6 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app" class="relative">
     <Navbar />
+
     <transition
       :name="$store.state.pageTransition.name"
       :mode="$store.state.pageTransition.mode"
@@ -16,10 +17,13 @@
 
 <script>
 // import Store from './store/index'
+import Navbar from '@/components/Navbar.vue'
 
 export default {
   name: 'App',
-  components: {},
+  components: {
+    Navbar,
+  },
   methods: {
     afterEnter: () => {
       window.scrollTo(0, 0)
