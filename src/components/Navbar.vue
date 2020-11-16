@@ -212,6 +212,11 @@ export default {
     nextT: { type: String },
     end: Boolean,
   },
+  computed: {
+    // prev() {
+    //   return this.data
+    // },
+  },
   methods: {
     slideBack() {
       this.$store.commit('setPageTransition', this.prevT)

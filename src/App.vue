@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Navbar />
     <transition
       :name="$store.state.pageTransition.name"
       :mode="$store.state.pageTransition.mode"
