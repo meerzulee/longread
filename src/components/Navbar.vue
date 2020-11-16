@@ -74,7 +74,14 @@
             @click="navigateTo(item.link)"
             :key="index"
           >
-            <img class="group-hover:hidden" :src="item.image" alt="" />
+            <video
+              v-if="item.video"
+              autoplay
+              loop
+              class="group-hover:hidden"
+              :src="item.video"
+              alt=""
+            />
             <p v-if="item.text" class="group-hover:hidden text-4xl font-bold">
               {{ item.text }}
             </p>
@@ -107,7 +114,11 @@
 
     <!-- bg-color -->
     <transition name="fade" mode="in-out">
-      <div v-if="toggleMenu" class="w-full h-screen top-0 z-30 menu-mask"></div>
+      <div
+        @click="toggleMenu = !toggleMenu"
+        v-if="toggleMenu"
+        class="w-full h-screen top-0 z-30 menu-mask"
+      ></div>
     </transition>
   </div>
 </template>
@@ -119,90 +130,90 @@ export default {
       toggleMenu: false,
 
       items: [
-        { text: 'Пролог', textHover: 'Пролог', image: '', link: 'Intro' },
+        { text: 'Пролог', textHover: 'Пролог', video: '', link: 'Intro' },
         {
           text: '',
           textHover: 'Женя Юрьевна',
-          image: require('@/assets/images/thumbnails/01.png'),
+          video: require('@/assets/videos/thumbs/01.mp4'),
           link: 'Page1',
         },
         {
           text: '',
-          textHover: 'Женя Юрьевна',
-          image: require('@/assets/images/thumbnails/02.png'),
+          textHover: 'Диана Алиева',
+          video: require('@/assets/videos/thumbs/02.mp4'),
           link: 'Page2',
         },
         {
           text: '',
-          textHover: 'Женя Юрьевна',
-          image: require('@/assets/images/thumbnails/03.png'),
+          textHover: 'Наталья Викторовна',
+          video: require('@/assets/videos/thumbs/03.mp4'),
           link: 'Page3',
         },
         {
           text: '',
-          textHover: 'Женя Юрьевна',
-          image: require('@/assets/images/thumbnails/04.png'),
+          textHover: 'Сулейма',
+          video: require('@/assets/videos/thumbs/04.mp4'),
           link: 'Page4',
         },
         {
           text: '',
-          textHover: 'Женя Юрьевна',
-          image: require('@/assets/images/thumbnails/05.png'),
+          textHover: 'Диас',
+          video: require('@/assets/videos/thumbs/05.mp4'),
           link: 'Page5',
         },
         {
           text: '',
-          textHover: 'Женя Юрьевна',
-          image: require('@/assets/images/thumbnails/06.png'),
+          textHover: 'Евгения',
+          video: require('@/assets/videos/thumbs/06.mp4'),
           link: 'Page6',
         },
         {
           text: '',
-          textHover: 'Женя Юрьевна',
-          image: require('@/assets/images/thumbnails/07.png'),
+          textHover: 'Адилет',
+          video: require('@/assets/videos/thumbs/07.mp4'),
           link: 'Page7',
         },
         {
           text: '',
-          textHover: 'Женя Юрьевна',
-          image: require('@/assets/images/thumbnails/08.png'),
+          textHover: 'Евгений',
+          video: require('@/assets/videos/thumbs/08.mp4'),
           link: 'Page8',
         },
         {
           text: '',
-          textHover: 'Женя Юрьевна',
-          image: require('@/assets/images/thumbnails/09.png'),
+          textHover: 'Аскар',
+          video: require('@/assets/videos/thumbs/09.mp4'),
           link: 'Page9',
         },
 
         {
           text: '',
-          textHover: 'Женя Юрьевна',
-          image: require('@/assets/images/thumbnails/10.png'),
+          textHover: 'Олеся',
+          video: require('@/assets/videos/thumbs/10.mp4'),
           link: 'Page10',
         },
         {
           text: '',
-          textHover: 'Женя Юрьевна',
-          image: require('@/assets/images/thumbnails/11.png'),
+          textHover: 'Айдай',
+          video: require('@/assets/videos/thumbs/11.mp4'),
           link: 'Page11',
         },
         {
           text: '',
-          textHover: 'Женя Юрьевна',
-          image: require('@/assets/images/thumbnails/12.png'),
+          textHover: 'ЛГБТ-активист с юга',
+          video: require('@/assets/videos/thumbs/12.mp4'),
           link: 'Page12',
         },
         {
           text: '',
-          textHover: 'Женя Юрьевна',
-          image: require('@/assets/images/thumbnails/13.png'),
+          textHover: 'ЛГБТ-активист с юга',
+          video: require('@/assets/videos/thumbs/13.mp4'),
           link: 'Page13',
         },
         {
           text: 'Заключение',
           textHover: 'Заключение',
-          image: '',
+          video: '',
           link: 'Outro',
         },
       ],
