@@ -24,12 +24,16 @@ export default {
   components: {
     Navbar,
   },
+
   methods: {
     afterEnter: () => {
       window.scrollTo(0, 0)
     },
     afterLeave: () => {
       // Store.commit('setPageTransition', 'default')
+    },
+    defocusApp() {
+      this.$root.$emit('defocusApp') // emitted event
     },
   },
 }

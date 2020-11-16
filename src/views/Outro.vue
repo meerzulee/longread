@@ -1,6 +1,5 @@
 <template>
   <div class="h-screen bg-primary-darker relative flex justify-center">
-    <Navbar v-bind="navbar" end />
     <div class="outro-container overflow-y-scroll pr-10 mt-20 text-white">
       <p class="text-xl font-normal whitespace-pre-line" v-html="outroText"></p>
       <div class="flex my-24">
@@ -27,10 +26,7 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue'
-
 export default {
-  components: { Navbar },
   data() {
     return {
       navbar: {
