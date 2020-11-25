@@ -45,7 +45,7 @@ export default {
       })
     },
     start() {
-      if (event.keyCode === 38) {
+      if (event.keyCode === 38 || event.keyCode === 39) {
         this.slideUp()
       }
     },
