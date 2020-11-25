@@ -5,7 +5,7 @@
       class="absolute object-cover w-full h-full"
       alt=""
     />
-    <BgVideo :src="require('@/assets/videos/test/Intro.webm')" :end="0.6" />
+    <BgVideo :src="require('@/assets/videos/test/intro.webm')" :end="0.6" />
 
     <div
       class="absolute bottom-0 right-0 flex flex-col items-center mb-14 w-30r mr-30r"
