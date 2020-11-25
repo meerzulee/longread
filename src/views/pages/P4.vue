@@ -5,13 +5,14 @@
       class="absolute object-cover w-full h-full"
       alt=""
     />
-    <video
+    <BgVideo :src="require('@/assets/videos/test/04.webm')" :end="0.2" />
+    <!-- <video
       loop
       autoplay
       src="@/assets/videos/04.webm"
       class="absolute object-cover w-full h-full"
       alt=""
-    />
+    /> -->
     <div class="relative mt-12 mr-40">
       <Header class="mb-12">
         <template v-slot:name>Сулейма</template>
@@ -23,10 +24,12 @@
 </template>
 
 <script>
+import BgVideo from '@/components/BgVideo.vue'
+
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
 export default {
-  components: { Header, Story },
+  components: { Header, Story, BgVideo },
   data() {
     return {
       storyText: `- Я не хожу на служения в церковь уже много-много лет. На это были разные причины – учеба не позволяла, потом работа. Я не хочу превращать свою жизнь в кучу ритуалов, не хочу становиться религиозной в не очень хорошем смысле этого слова, когда это превращается в автоматизм. Для меня это личное и интимное. Я хочу делать это осознанно. 

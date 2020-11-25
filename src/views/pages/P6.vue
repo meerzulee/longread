@@ -5,13 +5,15 @@
       class="absolute object-cover w-full h-full"
       alt=""
     />
-    <video
+    <!-- <video
       loop
       autoplay
       src="@/assets/videos/06.webm"
       class="absolute object-cover w-full h-full"
       alt=""
-    />
+    /> -->
+    <BgVideo :src="require('@/assets/videos/test/06.webm')" />
+
     <div class="relative mt-12 ml-360p">
       <Header class="mb-12">
         <template v-slot:name>Евгения</template>
@@ -23,10 +25,12 @@
 </template>
 
 <script>
+import BgVideo from '@/components/BgVideo.vue'
+
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
 export default {
-  components: { Header, Story },
+  components: { Header, Story, BgVideo },
   data() {
     return {
       storyText: `- Сколько примерно к вам поступает просьб о помощи в  месяц?

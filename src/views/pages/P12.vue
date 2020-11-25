@@ -5,13 +5,15 @@
       class="absolute object-cover w-full h-full"
       alt=""
     />
-    <video
+    <!-- <video
       loop
       autoplay
       src="@/assets/videos/12.webm"
       class="absolute object-cover w-full h-full"
       alt=""
-    />
+    /> -->
+    <BgVideo :src="require('@/assets/videos/test/12.webm')" :end="0.6" />
+
     <div class="relative mt-12 mr-64 pr-56">
       <Header class="mb-12">
         <template v-slot:name

@@ -5,13 +5,15 @@
       class="absolute object-cover w-full h-full"
       alt=""
     />
-    <video
+    <!-- <video
       loop
       autoplay
       src="@/assets/videos/09.webm"
       class="absolute object-cover w-full h-full"
       alt=""
-    />
+    /> -->
+    <BgVideo :src="require('@/assets/videos/test/09.webm')" :end="0.8" />
+
     <div class="relative mt-12 mr-56">
       <Header class="mb-12">
         <template v-slot:name>Аскар</template>
@@ -23,6 +25,8 @@
 </template>
 
 <script>
+// import BgVideo from '@/components/BgVideo.vue'
+
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
 export default {

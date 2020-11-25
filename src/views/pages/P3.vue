@@ -5,13 +5,15 @@
       class="absolute object-cover w-full h-full"
       alt=""
     />
-    <video
+    <!-- <video
       loop
       autoplay
-      src="@/assets/videos/03.webm"
+      src="@/assets/videos/test/03.webm"
       class="absolute object-cover w-full h-full"
       alt=""
-    />
+    /> -->
+    <BgVideo :src="require('@/assets/videos/test/03.webm')" :end="0.8" />
+
     <div class="relative mt-12 mr-64 pr-56 flex flex-col justify-between">
       <Header>
         <template v-slot:name>Наталья Викторовна</template>
@@ -23,10 +25,12 @@
 </template>
 
 <script>
+import BgVideo from '@/components/BgVideo.vue'
+
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
 export default {
-  components: { Header, Story },
+  components: { Header, Story, BgVideo },
   data() {
     return {
       storyText: `- Помню, я брала своего сына в лагерь на тренинги по ЛГБТ. Позже он сказал мне, что он трансгендер. Потом, что, наверное, он гей. И я себя поймала на мысли, что я испугалась: таскаю ребенка везде и, вот, теперь. Мне с трудом удалось себя остановить. 

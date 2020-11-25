@@ -5,13 +5,7 @@
       class="absolute object-cover w-full h-full"
       alt=""
     />
-    <video
-      loop
-      autoplay
-      src="@/assets/videos/07.webm"
-      class="absolute object-cover w-full h-full"
-      alt=""
-    />
+    <BgVideo :src="require('@/assets/videos/test/07.webm')" :end="0.6" />
     <div class="relative mt-12 mr-360p">
       <Header class="mb-12">
         <template v-slot:name>Адилет</template>
@@ -26,8 +20,10 @@
 <script>
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
+import BgVideo from '@/components/BgVideo.vue'
 export default {
-  components: { Header, Story },
+  components: { Header, Story, BgVideo },
+
   data() {
     return {
       storyText: `- Каждый год мы стараемся, чтобы в академии МВД все курсанты проходили модуль по работе с ЛГБТ-сообществом. Конечно, не всегда получается. 

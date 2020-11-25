@@ -5,13 +5,15 @@
       class="absolute object-cover w-full h-full"
       alt=""
     />
-    <video
+    <!-- <video
       loop
       autoplay
       src="@/assets/videos/11.webm"
       class="absolute object-cover w-full h-full"
       alt=""
-    />
+    /> -->
+    <BgVideo :src="require('@/assets/videos/test/11.webm')" :end="0.8" />
+
     <div class="relative mt-12 ml-24">
       <Header class="mb-20">
         <template v-slot:name>Айдай</template>

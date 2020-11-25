@@ -5,13 +5,15 @@
       class="absolute object-cover w-full h-full"
       alt=""
     />
-    <video
+    <!-- <video
       loop
       autoplay
       src="@/assets/videos/05.webm"
       class="absolute object-cover w-full h-full"
       alt=""
-    />
+    /> -->
+    <BgVideo :src="require('@/assets/videos/test/05.webm')" :end="0.6" />
+
     <div class="relative mt-12 mr-64 pr-32">
       <Header class="mb-12">
         <template v-slot:name>Диас</template>
@@ -23,10 +25,13 @@
 </template>
 
 <script>
+import BgVideo from '@/components/BgVideo.vue'
+
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
+
 export default {
-  components: { Header, Story },
+  components: { Header, Story, BgVideo },
   data() {
     return {
       storyText: ` Когда люди не понимали кто я, они сразу же смотрели на грудь. Они считывали меня как девушку - это то с чем я сталкивался и почему удалил грудь.    
