@@ -1,5 +1,6 @@
 @tailwind base;
 @import "./Piazzolla.css";
+@import "./epic-spinners.min.css"
 html {
     @apply font-body;
 }
