@@ -14,6 +14,7 @@ import P10 from '@/views/pages/P10.vue'
 import P11 from '@/views/pages/P11.vue'
 import P12 from '@/views/pages/P12.vue'
 import P13 from '@/views/pages/P13.vue'
+import P14 from '@/views/pages/P14.vue'
 
 import Outro from '@/views/Outro.vue'
 
@@ -85,7 +86,11 @@ const routes = [
     name: 'Page13',
     component: P13
   },
-
+  {
+    path: '/p14',
+    name: 'Page14',
+    component: P14
+  },
 
   {
     path: '/outro',

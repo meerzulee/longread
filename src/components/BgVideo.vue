@@ -4,6 +4,7 @@
     :src="src"
     class="absolute w-full object-cover h-full"
     alt=""
+    ref="bgvid"
     @timeupdate="loop($event)"
   />
 </template>
@@ -20,6 +21,9 @@ export default {
       type: Number,
       default: 0.5,
     },
+  },
+  mounted() {
+    this.$refs.bgvid.play()
   },
   methods: {
     loop(e) {

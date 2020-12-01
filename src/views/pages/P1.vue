@@ -1,18 +1,16 @@
 <template>
   <div class="h-screen bg-blue-900 relative flex justify-center">
     <img
-      src="@/assets/images/backgrounds/01.png"
-      class="absolute object-cover w-full h-full"
+      src="@/assets/images/backgrounds/1.png"
+      class="absolute object-cover w-full h-full object-bottom"
       alt=""
     />
-    <!-- <video
-      loop
-      autoplay
-      src="@/assets/videos/test/01.webm"
-      class="absolute object-cover w-full h-full"
-      alt=""
-    /> -->
-    <BgVideo :src="require('@/assets/videos/test/01.webm')" :end="0.6" />
+
+    <BgVideo
+      :src="require('@/assets/videos/test/1.webm')"
+      class="object-bottom"
+      :end="0.6"
+    />
 
     <div class="relative mt-12">
       <Header class="mb-12">

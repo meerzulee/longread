@@ -1,9 +1,24 @@
 <template>
   <div class="home h-screen bg-teal-600 relative">
-    <img
+    <!-- <img
       src="@/assets/images/intro.png"
-      class="absolute object-cover w-full h-full"
+      class="absolute object-cover w-full h-full object-bottom"
       alt=""
+    /> -->
+    <!-- <vue-plyr class="absolute w-full h-full bottom-0">
+      <div class="plyr__video-embed">
+        <iframe
+          class="object-cover"
+          src="https://player.vimeo.com/video/485585685?background=1&amp;loop=true&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+          allow="autoplay"
+          loop
+        ></iframe>
+      </div>
+    </vue-plyr> -->
+
+    <BgVideo
+      :src="require('@/assets/videos/intro.webm')"
+      class="object-bottom"
     />
     <BgVideo :src="require('@/assets/videos/test/intro.webm')" :end="0.6" />
 
@@ -30,7 +45,12 @@
 </template>
 
 <script>
+// import { vueVimeoPlayer } from 'vue-vimeo-player'
+
 export default {
+  components: {
+    // vueVimeoPlayer,
+  },
   mounted() {
     window.addEventListener('keyup', this.start)
   },

@@ -230,7 +230,7 @@ export default {
       if (this.$route.name === 'Page1') {
         return 'Intro'
       } else if (this.$route.name === 'Outro') {
-        return 'Page13'
+        return 'Page14'
       } else {
         return `Page${this.$route.name.split('Page')[1] - 1}`
       }
@@ -243,7 +243,7 @@ export default {
       }
     },
     next() {
-      if (parseInt(this.$route.name.split('Page')[1]) + 1 < 14) {
+      if (parseInt(this.$route.name.split('Page')[1]) + 1 <= 14) {
         return `Page${parseInt(this.$route.name.split('Page')[1]) + 1}`
       } else {
         return 'Outro'

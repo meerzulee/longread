@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen bg-blue-900 relative flex justify-center">
     <img
-      src="@/assets/images/backgrounds/08.png"
+      src="@/assets/images/backgrounds/8.png"
       class="absolute object-cover w-full h-full"
       alt=""
     />
@@ -12,7 +12,7 @@
       class="absolute object-cover w-full h-full"
       alt=""
     /> -->
-    <BgVideo :src="require('@/assets/videos/test/08.webm')" :end="1" />
+    <BgVideo :src="require('@/assets/videos/test/8.webm')" :end="1" />
 
     <div class="relative mt-12 mr-64 pr-40">
       <Header class="mb-24">

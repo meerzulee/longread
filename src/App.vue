@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="relative">
+    <Preloader />
     <Navbar />
 
     <transition
@@ -18,11 +19,13 @@
 <script>
 // import Store from './store/index'
 import Navbar from '@/components/Navbar.vue'
+import Preloader from '@/components/Preloader.vue'
 
 export default {
   name: 'App',
   components: {
     Navbar,
+    Preloader,
   },
 
   methods: {
