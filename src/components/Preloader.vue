@@ -34,7 +34,8 @@
 
 <script>
 import 'epic-spinners/dist/lib/epic-spinners.min.css'
-import { SelfBuildingSquareSpinner } from 'epic-spinners'
+
+import { SelfBuildingSquareSpinner } from 'epic-spinners/dist/lib/epic-spinners.min.js'
 
 export default {
   components: {

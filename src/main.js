@@ -9,6 +9,7 @@ Vue.component('BgVideo', () => import('@/components/BgVideo.vue'))
 
 // 
 import '@/assets/css/tailwind.css'
+import 'epic-spinners/dist/lib/epic-spinners.min.css'
 
 Vue.config.productionTip = false
 
