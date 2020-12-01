@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import 'epic-spinners/dist/lib/epic-spinners.min.css'
 import { SelfBuildingSquareSpinner } from 'epic-spinners'
 
 export default {
