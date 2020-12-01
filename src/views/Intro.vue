@@ -18,6 +18,7 @@
 
     <BgVideo
       :src="require('@/assets/videos/intro.webm')"
+      :start="0"
       class="object-bottom"
     />
     <BgVideo :src="require('@/assets/videos/test/intro.webm')" :end="0.6" />

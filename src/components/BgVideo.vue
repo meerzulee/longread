@@ -6,6 +6,7 @@
     alt=""
     ref="bgvid"
     @timeupdate="loop($event)"
+    muted
   />
 </template>
 
