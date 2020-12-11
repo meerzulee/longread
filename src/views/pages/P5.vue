@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen bg-blue-900 relative flex justify-end">
     <img
-      src="@/assets/images/backgrounds/5.png"
+      src="@/assets/images/backgrounds/5.jpg"
       class="absolute object-cover w-full h-full"
       alt=""
     />
