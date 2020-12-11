@@ -4,10 +4,10 @@
       v-show="!isLoaded"
       class="absolute h-screen inset-0 bg-primary-dark w-screen flex items-center justify-center preloader-z"
     >
-      <self-building-square-spinner :size="100" color="#CD6EF0" />
+      <IntersectingCirclesSpinner :size="100" color="#CD6EF0" />
       <div class="hidden" v-if="!isLoaded">
         <img
-          :src="require('@/assets/images/backgrounds/' + item + '.png')"
+          :src="require('@/assets/images/backgrounds/' + item + '.jpg')"
           v-for="(item, index) in 13"
           @load="loadedImg(item)"
           :key="'A' + index"
@@ -35,11 +35,11 @@
 <script>
 import 'epic-spinners/dist/lib/epic-spinners.min.css'
 
-import { SelfBuildingSquareSpinner } from 'epic-spinners/dist/lib/epic-spinners.min.js'
+import { IntersectingCirclesSpinner } from 'epic-spinners/dist/lib/epic-spinners.min.js'
 
 export default {
   components: {
-    SelfBuildingSquareSpinner,
+    IntersectingCirclesSpinner,
   },
   data() {
     return {

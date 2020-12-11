@@ -2,7 +2,7 @@
   <div class="h-screen bg-blue-900 relative flex justify-center">
     <!--  -->
     <img
-      src="@/assets/images/backgrounds/2.png"
+      src="@/assets/images/backgrounds/2.jpg"
       class="absolute object-cover w-full h-full"
       alt=""
     />
