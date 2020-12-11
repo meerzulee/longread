@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen relative flex justify-center">
     <img
-      src="@/assets/images/backgrounds/13.jpg"
+      src="@/assets/images/backgrounds/13.png"
       class="absolute object-cover w-full h-full"
       alt=""
     />
