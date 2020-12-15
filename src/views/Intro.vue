@@ -21,11 +21,10 @@
       :start="0"
       class="object-bottom"
     />
-    <BgVideo :src="require('@/assets/videos/test/intro.webm')" :end="0.6" />
+    <BgVideo :src="require('@/assets/videos/test/intro.webm')" :end="0.65" />
 
     <div
-      c
-      lass="absolute bottom-0 left-1/2 ml-1 flex flex-col items-center mb-14 w-30r"
+      class="absolute bottom-0 left-1/2 ml-1 flex flex-col items-center mb-14 w-30r"
     >
       <p
         class="p-8 text-2xl font-bold leading-9 tracking-wider text-left text-white bg-text"

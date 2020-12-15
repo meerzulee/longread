@@ -5,21 +5,38 @@
       class="absolute h-screen inset-0 bg-primary-dark w-screen flex items-center justify-center preloader-z"
     >
       <IntersectingCirclesSpinner :size="100" color="#CD6EF0" />
-      <div class="hidden" v-if="!isLoaded">
+      <div class="hidden" v-if="!tLoaded">
         <img
           :src="require('@/assets/images/backgrounds/' + item + '.jpg')"
-          v-for="(item, index) in 13"
+          v-for="(item, index) in 4"
           @load="loadedImg(item)"
           :key="'A' + index"
           alt=""
         />
         <video
           :src="require('@/assets/videos/test/' + x + '.webm')"
-          v-for="(x, index) in 13"
+          v-for="(x, index) in 4"
           @loadeddata="loadedVideo(x)"
           :key="'B' + index"
           alt=""
         />
+        <!-- download others -->
+        <div v-if="isLoaded">
+          <img
+            :src="require('@/assets/images/backgrounds/' + (i1 + 4) + '.jpg')"
+            v-for="(i1, index) in 7"
+            @load="loadedT(i1)"
+            :key="'A1' + index"
+            alt=""
+          />
+          <video
+            :src="require('@/assets/videos/test/' + (v1 + 4) + '.webm')"
+            v-for="(v1, index) in 7"
+            @loadeddata="loadedT(v1)"
+            :key="'B1' + index"
+            alt=""
+          />
+        </div>
         <video
           :src="require('@/assets/videos/outro/' + y + '.webm')"
           v-for="(y, index) in ['Sveta', 'Tal', 'Maya', 'Diana']"
@@ -45,12 +62,13 @@ export default {
     return {
       isLoaded: false,
       imgLoaded: false,
+      videoLoaded: false,
+      tLoaded: false,
       imgCounter: 0,
-
       videoCounter: 0,
+      tCounter: 0,
       videoMCounter: 0,
       videoMLoaded: false,
-      videoLoaded: false,
     }
   },
   mounted() {
@@ -62,7 +80,7 @@ export default {
     loadedImg(k) {
       this.imgCounter++
       console.log(k)
-      if (this.imgCounter === 13) {
+      if (this.imgCounter === 4) {
         this.imgLoaded = true
         this.check()
       }
@@ -70,17 +88,24 @@ export default {
     loadedVideo(l) {
       this.videoLoaded++
       console.log(l)
-      if (this.videoLoaded === 13) {
+      if (this.videoLoaded === 4) {
         this.videoLoaded = true
         this.check()
       }
     },
     loadedVideoM(l) {
-      this.videoMLoaded++
+      this.videoMCounter++
       console.log(l)
-      if (this.videoMLoaded === 4) {
+      if (this.videoMCounter === 4) {
         this.videoMLoaded = true
         this.check()
+      }
+    },
+    loadedT(t) {
+      this.tCounter++
+      console.log(t)
+      if (this.tCounter === 14) {
+        this.tLoaded = true
       }
     },
     check() {
