@@ -56,7 +56,7 @@ export default {
   },
   methods: {
     closeModal() {
-      if (event.keyCode === 40) {
+      if (event.keyCode === 27) {
         this.toggleModal = false
       }
     },

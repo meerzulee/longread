@@ -5,6 +5,7 @@ import P1 from '@/views/pages/P1.vue'
 import P2 from '@/views/pages/P2.vue'
 import P3 from '@/views/pages/P3.vue'
 import P4 from '@/views/pages/P4.vue'
+import P4Song from '@/views/pages/P4Song.vue'
 import P5 from '@/views/pages/P5.vue'
 import P6 from '@/views/pages/P6.vue'
 import P7 from '@/views/pages/P7.vue'
@@ -43,6 +44,11 @@ const routes = [
     path: '/p4',
     name: 'Page4',
     component: P4
+  },
+  {
+    path: '/p4song',
+    name: 'Page4Song',
+    component: P4Song
   },
   {
     path: '/p5',

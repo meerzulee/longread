@@ -3,7 +3,7 @@
     <!--  -->
     <img
       src="@/assets/images/backgrounds/2.jpg"
-      class="absolute object-cover w-full h-full"
+      class="absolute object-cover w-full h-full object-left-bottom"
       alt=""
     />
     <!-- <video
@@ -13,7 +13,10 @@
       class="absolute object-cover w-full h-full"
       alt=""
     /> -->
-    <BgVideo :src="require('@/assets/videos/test/2.webm')" />
+    <BgVideo
+      :src="require('@/assets/videos/test/2.webm')"
+      class="object-left-bottom"
+    />
 
     <div class="relative mt-12 ml-56">
       <Header class="mb-12">

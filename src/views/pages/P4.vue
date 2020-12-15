@@ -2,10 +2,14 @@
   <div class="h-screen bg-blue-900 relative flex justify-center">
     <img
       src="@/assets/images/backgrounds/4.jpg"
-      class="absolute object-cover w-full h-full"
+      class="absolute object-cover w-full h-full object-left-bottom"
       alt=""
     />
-    <BgVideo :src="require('@/assets/videos/test/4.webm')" :end="0.2" />
+    <BgVideo
+      :src="require('@/assets/videos/test/4.webm')"
+      class="object-left-bottom"
+      :end="0.2"
+    />
     <!-- <video
       loop
       autoplay

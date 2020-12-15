@@ -231,6 +231,10 @@ export default {
         return 'Intro'
       } else if (this.$route.name === 'Outro') {
         return 'Page14'
+      } else if (this.$route.name === 'Page4Song') {
+        return 'Page4'
+      } else if (this.$route.name === 'Page5') {
+        return 'Page4Song'
       } else {
         return `Page${this.$route.name.split('Page')[1] - 1}`
       }
@@ -243,8 +247,14 @@ export default {
       }
     },
     next() {
-      if (parseInt(this.$route.name.split('Page')[1]) + 1 <= 14) {
-        return `Page${parseInt(this.$route.name.split('Page')[1]) + 1}`
+      if (this.$route.name === 'Page4Song') {
+        return 'Page5'
+      } else if (parseInt(this.$route.name.split('Page')[1]) + 1 <= 14) {
+        if (this.$route.name === 'Page4') {
+          return 'Page4Song'
+        } else {
+          return `Page${parseInt(this.$route.name.split('Page')[1]) + 1}`
+        }
       } else {
         return 'Outro'
       }
@@ -286,18 +296,26 @@ export default {
       }, 500)
     },
     handleKeyUp() {
-      // Page up
-      if (event.keyCode === 37 && this.$route.name !== 'Intro') {
-        this.slideBack()
+      if (event.keyCode === 27 || event.keyCode === 38) {
+        this.toggleMenu = false
       }
+      if (this.toggleMenu === false && event.keyCode === 40) {
+        this.toggleMenu = true
+      }
+      if (this.toggleMenu === false) {
+        // Page up
+        if (event.keyCode === 37 && this.$route.name !== 'Intro') {
+          this.slideBack()
+        }
 
-      // Page down
-      if (
-        event.keyCode === 39 &&
-        this.$route.name !== 'Outro' &&
-        this.$route.name !== 'Intro'
-      ) {
-        this.slideNext()
+        // Page down
+        if (
+          event.keyCode === 39 &&
+          this.$route.name !== 'Outro' &&
+          this.$route.name !== 'Intro'
+        ) {
+          this.slideNext()
+        }
       }
     },
   },

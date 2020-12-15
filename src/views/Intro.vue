@@ -1,5 +1,5 @@
 <template>
-  <div class="home h-screen bg-teal-600 relative">
+  <div class="intro h-screen bg-teal-600 relative">
     <!-- <img
       src="@/assets/images/intro.png"
       class="absolute object-cover w-full h-full object-bottom"
@@ -24,7 +24,8 @@
     <BgVideo :src="require('@/assets/videos/test/intro.webm')" :end="0.6" />
 
     <div
-      class="absolute bottom-0 right-0 flex flex-col items-center mb-14 w-30r mr-30r"
+      c
+      lass="absolute bottom-0 left-1/2 ml-1 flex flex-col items-center mb-14 w-30r"
     >
       <p
         class="p-8 text-2xl font-bold leading-9 tracking-wider text-left text-white bg-text"

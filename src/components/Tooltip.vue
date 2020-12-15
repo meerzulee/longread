@@ -2,7 +2,7 @@
   <div class="relative focus flex mt-4 flex-col">
     <div class="absolute bottom-0 rounded-md overflow-x-hidden mb-10">
       <div
-        class="overflow-y-scroll modal"
+        class="overflow-y-scroll modal rounded-xl"
         v-click-outside="onClickOutside"
         v-if="toggle"
       >
@@ -51,7 +51,11 @@ export default {
 </script>
 
 <style>
+.modal::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 99px rgba(255, 255, 255);
+  border-radius: 0;
+}
 .shadowt {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
 }
 </style>

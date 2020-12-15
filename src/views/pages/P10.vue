@@ -2,7 +2,7 @@
   <div class="h-screen bg-blue-900 relative flex justify-center">
     <img
       src="@/assets/images/backgrounds/10.jpg"
-      class="absolute object-cover w-full h-full"
+      class="absolute object-cover w-full h-full object-left-bottom"
       alt=""
     />
     <!-- <video
@@ -12,7 +12,11 @@
       class="absolute object-cover w-full h-full"
       alt=""
     /> -->
-    <BgVideo :src="require('@/assets/videos/test/10.webm')" :end="0.8" />
+    <BgVideo
+      :src="require('@/assets/videos/test/10.webm')"
+      class="object-left-bottom"
+      :end="0.8"
+    />
 
     <div class="relative mt-12 ml-56">
       <Header class="mb-12">

@@ -2,13 +2,13 @@
   <div class="h-screen bg-blue-900 relative flex justify-center">
     <img
       src="@/assets/images/backgrounds/1.jpg"
-      class="absolute object-cover w-full h-full object-bottom"
+      class="absolute object-cover w-full h-full object-right-bottom"
       alt=""
     />
 
     <BgVideo
       :src="require('@/assets/videos/test/1.webm')"
-      class="object-bottom"
+      class="object-right-bottom"
       :end="0.6"
     />
 

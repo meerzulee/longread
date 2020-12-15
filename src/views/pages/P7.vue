@@ -2,10 +2,14 @@
   <div class="h-screen bg-blue-900 relative flex justify-end">
     <img
       src="@/assets/images/backgrounds/7.jpg"
-      class="absolute object-cover w-full h-full"
+      class="absolute object-cover w-full h-full object-left-bottom"
       alt=""
     />
-    <BgVideo :src="require('@/assets/videos/test/7.webm')" :end="0.6" />
+    <BgVideo
+      :src="require('@/assets/videos/test/7.webm')"
+      class="object-left-bottom"
+      :end="0.6"
+    />
     <div class="relative mt-12 mr-360p">
       <Header class="mb-12">
         <template v-slot:name>Адилет</template>
