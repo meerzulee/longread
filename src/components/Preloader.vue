@@ -14,7 +14,7 @@
           alt=""
         />
         <video
-          :src="require('@/assets/videos/test/' + x + '.webm')"
+          :src="require('@/assets/videos/webm/' + x + '.webm')"
           v-for="(x, index) in 4"
           @loadeddata="loadedVideo(x)"
           :key="'B' + index"
@@ -30,7 +30,7 @@
             alt=""
           />
           <video
-            :src="require('@/assets/videos/test/' + (v1 + 4) + '.webm')"
+            :src="require('@/assets/videos/webm/' + (v1 + 4) + '.webm')"
             v-for="(v1, index) in 7"
             @loadeddata="loadedT(v1)"
             :key="'B1' + index"

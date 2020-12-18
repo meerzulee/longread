@@ -13,7 +13,7 @@
       alt=""
     /> -->
     <BgVideo
-      :src="require('@/assets/videos/test/8.webm')"
+      :src="require('@/assets/videos/webm/8.webm')"
       class="object-right-bottom"
       :end="1"
     />

@@ -21,7 +21,7 @@
       :start="0"
       class="object-bottom"
     />
-    <BgVideo :src="require('@/assets/videos/test/intro.webm')" :end="0.65" />
+    <BgVideo :src="require('@/assets/videos/webm/intro.webm')" :end="0.65" />
 
     <div
       class="absolute bottom-0 left-1/2 ml-1 flex flex-col items-center mb-14 w-30r"

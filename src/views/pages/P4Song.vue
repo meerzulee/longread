@@ -3,7 +3,7 @@
     <video
       loop
       autoplay
-      src="@/assets/videos/test/song.webm"
+      src="@/assets/videos/webm/song.webm"
       class="absolute object-cover w-full h-full"
       alt=""
     />

@@ -8,12 +8,12 @@
     <!-- <video
       loop
       autoplay
-      src="@/assets/videos/test/03.webm"
+      src="@/assets/videos/webm/03.webm"
       class="absolute object-cover w-full h-full"
       alt=""
     /> -->
     <BgVideo
-      :src="require('@/assets/videos/test/3.webm')"
+      :src="require('@/assets/videos/webm/3.webm')"
       class="object-bottom"
       :end="0.31"
       :start="0.4"

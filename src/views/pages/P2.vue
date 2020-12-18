@@ -9,13 +9,20 @@
     <!-- <video
       loop
       autoplay
-      src="@/assets/videos/test/02.webm"
+      src="@/assets/videos/webm/02.webm"
       class="absolute object-cover w-full h-full"
       alt=""
     /> -->
-    <BgVideo
-      :src="require('@/assets/videos/test/2.webm')"
+    <!-- <BgVideo
+      :src="require('@/assets/videos/webm/2.webm')"
       class="object-left-bottom"
+    /> -->
+    <video
+      autoplay
+      :src="require('@/assets/videos/mp4/1.mp4')"
+      class="absolute w-full object-cover object-left-bottom h-full"
+      loop
+      muted
     />
 
     <div class="relative mt-12 ml-56">
@@ -31,12 +38,10 @@
 </template>
 
 <script>
-import BgVideo from '@/components/BgVideo.vue'
-
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
 export default {
-  components: { Header, Story, BgVideo },
+  components: { Header, Story },
   data() {
     return {
       storyText: `- Заниматься секс-работой - это был мой осознанный выбор. К этому я отношусь как к полноценной работе. Да, там деньги - не легкие деньги, но быстрые. 

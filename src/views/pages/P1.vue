@@ -1,17 +1,24 @@
 <template>
   <div class="h-screen bg-blue-900 relative flex justify-center">
-    <img
+    <!-- <img
       src="@/assets/images/backgrounds/1.jpg"
       class="absolute object-cover w-full h-full object-right-bottom"
       alt=""
-    />
+    /> -->
 
-    <BgVideo
-      :src="require('@/assets/videos/test/1.webm')"
+    <!-- <BgVideo
+      :src="require('@/assets/videos/mp4/1.mp4')"
       class="object-right-bottom"
-      :end="0.6"
+      :end="0.1"
+      :start="0.1"
+    /> -->
+    <video
+      autoplay
+      :src="require('@/assets/videos/mp4/1.mp4')"
+      class="absolute w-full object-cover object-right-bottom h-full"
+      loop
+      muted
     />
-
     <div class="relative mt-12">
       <Header class="mb-12">
         <template v-slot:name>Женя Юрьевна</template>
@@ -24,12 +31,10 @@
 </template>
 
 <script>
-import BgVideo from '@/components/BgVideo.vue'
-
 import Header from '@/components/Header.vue'
 import Story from '@/components/Story.vue'
 export default {
-  components: { Header, Story, BgVideo },
+  components: { Header, Story },
 
   data() {
     return {
