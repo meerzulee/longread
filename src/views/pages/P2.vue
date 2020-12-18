@@ -19,7 +19,7 @@
     /> -->
     <video
       autoplay
-      :src="require('@/assets/videos/mp4/1.mp4')"
+      :src="require('@/assets/videos/mp4/2.mp4')"
       class="absolute w-full object-cover object-left-bottom h-full"
       loop
       muted
