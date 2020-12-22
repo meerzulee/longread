@@ -49,7 +49,7 @@
           />
         </div>
         <!-- stage 2 -->
-        <div class="hidden" v-if="!stage2Loaded">
+        <div class="hidden" v-if="stage1Loaded">
           <img
             :src="require('@/assets/images/backgrounds/' + (s2 + 4) + '.jpg')"
             v-for="(s2, index) in 5"
@@ -77,7 +77,7 @@
           />
         </div>
         <!-- stage 3 -->
-        <div class="hidden" v-if="!stage3Loaded">
+        <div class="hidden" v-if="stage2Loaded">
           <img
             :src="require('@/assets/images/backgrounds/' + (s3 + 9) + '.jpg')"
             v-for="(s3, index) in 4"
