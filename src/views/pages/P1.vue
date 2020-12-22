@@ -1,24 +1,25 @@
 <template>
   <div class="h-screen bg-blue-900 relative flex justify-center">
-    <!-- <img
+    <img
       src="@/assets/images/backgrounds/1.jpg"
       class="absolute object-cover w-full h-full object-right-bottom"
       alt=""
-    /> -->
+    />
+    -->
 
-    <!-- <BgVideo
-      :src="require('@/assets/videos/mp4/1.mp4')"
+    <BgVideo
+      :src="require('@/assets/videos/webm/1.webm')"
       class="object-right-bottom"
-      :end="0.1"
-      :start="0.1"
-    /> -->
-    <video
+      :start="0.5"
+      :end="0.7"
+    />
+    <!-- <video
       autoplay
       :src="require('@/assets/videos/mp4/1.mp4')"
       class="absolute w-full object-cover object-right-bottom h-full"
       loop
       muted
-    />
+    /> -->
     <div class="relative mt-12">
       <Header class="mb-12">
         <template v-slot:name>Женя Юрьевна</template>

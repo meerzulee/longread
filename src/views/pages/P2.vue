@@ -6,6 +6,10 @@
       class="absolute object-cover w-full h-full object-left-bottom"
       alt=""
     />
+    <BgVideo
+      :src="require('@/assets/videos/webm/2.webm')"
+      class="object-left-bottom"
+    />
     <!-- <video
       loop
       autoplay
@@ -13,17 +17,13 @@
       class="absolute object-cover w-full h-full"
       alt=""
     /> -->
-    <!-- <BgVideo
-      :src="require('@/assets/videos/webm/2.webm')"
-      class="object-left-bottom"
-    /> -->
-    <video
+    <!-- <video
       autoplay
       :src="require('@/assets/videos/mp4/2.mp4')"
       class="absolute w-full object-cover object-left-bottom h-full"
       loop
       muted
-    />
+    /> -->
 
     <div class="relative mt-12 ml-56">
       <Header class="mb-12">

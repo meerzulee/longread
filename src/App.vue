@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="relative">
-    <Preloader v-if="false" />
+    <Preloader />
     <Navbar />
 
     <transition
@@ -13,8 +13,6 @@
     </transition>
   </div>
 </template>
-
-
 
 <script>
 // import Store from './store/index'

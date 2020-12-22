@@ -5,13 +5,7 @@
       class="absolute object-cover w-full h-full object-bottom"
       alt=""
     />
-    <!-- <video
-      loop
-      autoplay
-      src="@/assets/videos/webm/03.webm"
-      class="absolute object-cover w-full h-full"
-      alt=""
-    /> -->
+
     <BgVideo
       :src="require('@/assets/videos/webm/3.webm')"
       class="object-bottom"

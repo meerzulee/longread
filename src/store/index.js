@@ -8,9 +8,13 @@ export default new Vuex.Store({
         pageTransition: {
             name: "slide-up",
             mode: "in-out"
-        }
+        },
+        loaded: false
     },
     mutations: {
+        setLoadedTrue(state) {
+            state.loaded = true
+        },
         setPageTransition(state, value) {
             if ("slide-up" === value) {
                 Vue.set(state, "pageTransition", {
