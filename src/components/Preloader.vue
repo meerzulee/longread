@@ -7,7 +7,7 @@
       <IntersectingCirclesSpinner :size="100" color="#CD6EF0" />
       <div v-if="!isLoaded">
         <!-- stage 1 -->
-        <div class="invisible absolute" v-if="!stage1Loaded">
+        <div class="hidden" v-if="!stage1Loaded">
           <!-- stage 1 -->
           <img
             :src="require('@/assets/images/backgrounds/' + s1 + '.jpg')"
@@ -49,7 +49,7 @@
           />
         </div>
         <!-- stage 2 -->
-        <div class="invisible absolute" v-if="!stage2Loaded">
+        <div class="hidden" v-if="!stage2Loaded">
           <img
             :src="require('@/assets/images/backgrounds/' + (s2 + 4) + '.jpg')"
             v-for="(s2, index) in 5"
@@ -77,7 +77,7 @@
           />
         </div>
         <!-- stage 3 -->
-        <div class="invisible absolute" v-if="!stage3Loaded">
+        <div class="hidden" v-if="!stage3Loaded">
           <img
             :src="require('@/assets/images/backgrounds/' + (s3 + 9) + '.jpg')"
             v-for="(s3, index) in 4"
