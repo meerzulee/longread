@@ -18,7 +18,9 @@
       :end="0.8"
     />
 
-    <div class="relative my-12 mr-56 flex flex-col justify-between">
+    <div
+      class="relative my-12 mr-56 laptop-mini:pr-64 flex flex-col justify-between"
+    >
       <Header>
         <template class="mb-10" v-slot:name>Аскар</template>
         цисгендерный мужчина, гей, 31 год

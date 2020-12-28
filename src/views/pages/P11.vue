@@ -18,7 +18,7 @@
       :end="0.8"
     />
 
-    <div class="relative my-12 ml-24 flex flex-col justify-start">
+    <div class="relative my-12 ml-24 tablet:ml-56 flex flex-col justify-start">
       <Header>
         <template v-slot:name>Айдай</template>
         представительница ЛГБТ-сообщества, 21 год

@@ -18,7 +18,9 @@
       :end="0.6"
     />
 
-    <div class="relative my-12 mr-64 pr-56 flex flex-col justify-between">
+    <div
+      class="relative my-12 mr-64 pr-56 tablet:pr-64 flex flex-col justify-between"
+    >
       <Header>
         <template v-slot:name
           >ЛГБТ-активист с юга <br />

@@ -11,7 +11,7 @@
       :end="0.6"
     />
     <div
-      class="relative my-16 mr-360p desktop:mr-64 flex flex-col justify-between"
+      class="relative my-16 mr-360p desktop:mr-64 laptop:mr-48 laptop-mini:mr-32 flex flex-col justify-between"
     >
       <Header>
         <template class="desktop:mt-16" v-slot:name>Адилет</template>

@@ -30,13 +30,13 @@ html{
 @screen tablet{
   html {
       /* 1rem 10px 10/16 */
-      font-size: 62.5%
+      /* font-size: 62.5% */
   }
 }
   @screen tablet-mini{
     html {
         /* 1rem 10px 10/16 */
-        font-size: 62.5%
+        /* font-size: 62.5% */
     }
 }
 
@@ -98,6 +98,7 @@ html{
 .outro-container{
   max-width: 1000px;
 }
+
 @screen desktop{
   .navbar-container{
     max-width: 1200px;
@@ -107,9 +108,19 @@ html{
      height: 100vh;
    
   }
+ 
+}
+@screen tablet{
+  .outro-container{
+    max-width: 800px;
+  }
   .navbar-rect {
-    width: 226px;
-    height: 140px;
+    width: 181px;
+    height: 110px;
+  }
+  .navbar-container{
+    max-width: 1000px;
+    
   }
 }
 .modal{

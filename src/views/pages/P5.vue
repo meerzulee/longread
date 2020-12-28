@@ -19,7 +19,7 @@
     />
 
     <div
-      class="relative my-16 mr-64 pr-32 desktop:pr-0 flex flex-col justify-between"
+      class="relative my-16 mr-64 pr-32 desktop:pr-0 laptop:mr-32 flex flex-col justify-between"
     >
       <Header>
         <template v-slot:name>Диас</template>
