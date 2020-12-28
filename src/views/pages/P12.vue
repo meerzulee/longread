@@ -18,8 +18,8 @@
       :end="0.6"
     />
 
-    <div class="relative mt-12 mr-64 pr-56">
-      <Header class="mb-12">
+    <div class="relative my-12 mr-64 pr-56 flex flex-col justify-between">
+      <Header>
         <template v-slot:name
           >ЛГБТ-активист с юга <br />
           Кыргызстана</template

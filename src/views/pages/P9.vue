@@ -18,9 +18,9 @@
       :end="0.8"
     />
 
-    <div class="relative mt-12 mr-56">
-      <Header class="mb-12">
-        <template v-slot:name>Аскар</template>
+    <div class="relative my-12 mr-56 flex flex-col justify-between">
+      <Header>
+        <template class="mb-10" v-slot:name>Аскар</template>
         цисгендерный мужчина, гей, 31 год
       </Header>
       <Story :storyText="storyText" />

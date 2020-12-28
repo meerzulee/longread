@@ -12,13 +12,31 @@ html{
     
 @tailwind utilities;
 
+
+.tb{
+  background-size: 100% 200%; 
+  background-image: linear-gradient(to bottom, #fff 50%, #32187C 50%);
+  transition: 
+    background-position .2s ease-in-out, 
+    color .2s ease-in-out;
+}
+
+.tb:hover,
+.tb:focus {
+  background-position: 0 100%;
+  color: #fff;
+}
 .header{
     max-width: 890px;
 }
 .story {
     max-width: 472px;
-    max-height: 700px;
+   
 }
+.story-width{
+  max-width: 472px;
+}
+
 .story-half {
   
   max-height: 456px;

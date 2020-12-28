@@ -13,12 +13,12 @@
       :start="0.4"
     />
 
-    <div class="relative mt-12 mr-64 pr-56 flex flex-col justify-between">
+    <div class="relative my-12 mr-64 p4-64 flex flex-col justify-between">
       <Header>
         <template v-slot:name>Наталья Викторовна</template>
         дружественный психиатр
       </Header>
-      <Story class="mb-20" maxLimitMini :storyText="storyText" />
+      <Story maxLimitMini :storyText="storyText" />
     </div>
   </div>
 </template>

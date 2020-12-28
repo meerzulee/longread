@@ -18,12 +18,12 @@
       :end="1"
     />
 
-    <div class="relative mt-12 mr-64 pr-40">
-      <Header class="mb-24">
+    <div class="relative my-16 mr-64 pr-40 flex flex-col justify-around">
+      <Header>
         <template v-slot:name>Евгений</template>
         цисгендерный мужчина, гей, 36 лет
       </Header>
-      <Story :storyText="storyText" noScroll />
+      <Story class="mb-12" :storyText="storyText" noScroll />
     </div>
   </div>
 </template>

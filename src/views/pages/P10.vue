@@ -18,8 +18,8 @@
       :end="0.8"
     />
 
-    <div class="relative mt-12 ml-56">
-      <Header class="mb-12">
+    <div class="relative my-12 ml-56 flex flex-col justify-between">
+      <Header>
         <template v-slot:name>Олеся</template>
         со-основательница ЛГБТ бара в Бишкеке, 29 лет
       </Header>

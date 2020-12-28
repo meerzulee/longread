@@ -17,8 +17,8 @@
       class="absolute object-cover w-full h-full"
       alt=""
     /> -->
-    <div class="relative mt-12 mr-40">
-      <Header class="mb-12">
+    <div class="relative my-12 mr-40 flex flex-col justify-between">
+      <Header>
         <template v-slot:name>Сулейма</template>
         квир-христианка, 25 лет
       </Header>

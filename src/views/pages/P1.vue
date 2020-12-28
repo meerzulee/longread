@@ -7,21 +7,21 @@
     />
     -->
 
-    <BgVideo
-      :src="require('@/assets/videos/webm/1.webm')"
+    <!-- <BgVideo
+      :src="require('@/assets/videos/mp4/test1.mp4')"
       class="object-right-bottom"
       :start="0.5"
       :end="0.7"
-    />
-    <!-- <video
+    /> -->
+    <video
       autoplay
-      :src="require('@/assets/videos/mp4/1.mp4')"
+      :src="require('@/assets/videos/mp4/test1c.mp4')"
       class="absolute w-full object-cover object-right-bottom h-full"
       loop
       muted
-    /> -->
-    <div class="relative mt-12">
-      <Header class="mb-12">
+    />
+    <div class="relative py-12 h-full flex flex-col justify-between">
+      <Header>
         <template v-slot:name>Женя Юрьевна</template>
         со-основательница и учредительница ЛГБТ-бара в Бишкеке, цисгендерная
         женщина, лесбиянка, 32 года

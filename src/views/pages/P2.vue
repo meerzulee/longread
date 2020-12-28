@@ -25,8 +25,8 @@
       muted
     /> -->
 
-    <div class="relative mt-12 ml-56">
-      <Header class="mb-12">
+    <div class="relative flex flex-col justify-between my-12 ml-56">
+      <Header>
         <template v-slot:name>Диана Алиева</template>
         транс-активистка и активистка за права секс-работниц, разделяет идеи
         феминизма и сестринства. Родилась и выросла в Кыргызстане. Сейчас живет

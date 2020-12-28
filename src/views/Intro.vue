@@ -35,12 +35,14 @@
         открыть дверь немного сильнее подтолкните. В воздухе пахнет дымом,
         разными духами и алкоголем…
       </p>
-      <button
-        @click="slideUp()"
-        class="flex items-center justify-center px-10 py-5 text-lg font-semibold leading-relaxed bg-white mt-9 rounded-xl"
-      >
-        Продолжить
-      </button>
+      <div>
+        <a
+          @click="slideUp()"
+          class="flex items-center justify-center cursor-pointer px-10 py-5 text-lg font-semibold relative leading-relaxed mt-9 rounded-xl tb"
+        >
+          Продолжить
+        </a>
+      </div>
     </div>
   </div>
 </template>

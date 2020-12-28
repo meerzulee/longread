@@ -18,12 +18,12 @@
       :end="0.8"
     />
 
-    <div class="relative mt-12 ml-24">
-      <Header class="mb-20">
+    <div class="relative my-12 ml-24 flex flex-col justify-start">
+      <Header>
         <template v-slot:name>Айдай</template>
         представительница ЛГБТ-сообщества, 21 год
       </Header>
-      <Story :storyText="storyText" noScroll />
+      <Story class="mt-20" :storyText="storyText" noScroll />
     </div>
   </div>
 </template>

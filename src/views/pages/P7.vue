@@ -10,8 +10,8 @@
       class="object-left-bottom"
       :end="0.6"
     />
-    <div class="relative mt-12 mr-360p">
-      <Header class="mb-12">
+    <div class="relative my-16 mr-360p flex flex-col justify-between">
+      <Header>
         <template v-slot:name>Адилет</template>
         директор ЛГБТ-организации «Кыргыз Индиго», <br />
         24 года

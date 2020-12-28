@@ -1,6 +1,6 @@
 <template>
   <div
-    class="story p-8 bg-text"
+    class="story p-8"
     :class="[
       maxLimitMini ? 'story-half' : '',
       noScroll ? 'overflow-y-hidden' : 'overflow-y-scroll ',
