@@ -17,7 +17,9 @@
       class="object-right-top"
     />
 
-    <div class="relative flex flex-col justify-between my-16 ml-360p">
+    <div
+      class="relative flex flex-col justify-between my-16 ml-360p desktop:ml-32"
+    >
       <Header>
         <template v-slot:name>Евгения</template>
         дружественная адвокатесса, 34 года

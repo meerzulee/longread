@@ -20,7 +20,9 @@
       loop
       muted
     />
-    <div class="relative py-12 h-full flex flex-col justify-between">
+    <div
+      class="relative py-12 h-full desktop:ml-24 flex flex-col justify-between"
+    >
       <Header>
         <template v-slot:name>Женя Юрьевна</template>
         со-основательница и учредительница ЛГБТ-бара в Бишкеке, цисгендерная

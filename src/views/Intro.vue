@@ -27,7 +27,7 @@
       class="absolute bottom-0 left-1/2 ml-1 flex flex-col items-center mb-14 w-30r"
     >
       <p
-        class="p-8 text-2xl font-bold leading-9 tracking-wider text-left text-white bg-text"
+        class="p-8 text-2xl desktop:text-xl font-bold leading-9 tracking-wider text-left text-white bg-text"
       >
         Идите прямо, затем поверните налево, затем еще раз налево. Увидите
         лестницу вниз, спускайтесь. Там темно, так что будьте аккуратнее. Лучше
@@ -38,7 +38,7 @@
       <div>
         <a
           @click="slideUp()"
-          class="flex items-center justify-center cursor-pointer px-10 py-5 text-lg font-semibold relative leading-relaxed mt-9 rounded-xl tb"
+          class="flex items-center justify-center cursor-pointer px-10 py-5 text-lg font-semibold relative laptop:mt-4 leading-relaxed mt-9 rounded-xl tb"
         >
           Продолжить
         </a>

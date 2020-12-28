@@ -25,7 +25,7 @@
           Кыргызстана</template
         >
       </Header>
-      <Story class="-mt-8" :storyText="storyText" />
+      <Story class="-mt-8 desktop:mt-2" :storyText="storyText" />
     </div>
   </div>
 </template>

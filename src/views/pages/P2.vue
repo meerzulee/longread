@@ -25,7 +25,9 @@
       muted
     /> -->
 
-    <div class="relative flex flex-col justify-between my-12 ml-56">
+    <div
+      class="relative flex flex-col justify-between desktop:pl-64 my-12 ml-56"
+    >
       <Header>
         <template v-slot:name>Диана Алиева</template>
         транс-активистка и активистка за права секс-работниц, разделяет идеи

@@ -2,23 +2,25 @@
   <div class="h-screen bg-blue-900 relative flex justify-center">
     <img
       src="@/assets/images/backgrounds/3.jpg"
-      class="absolute object-cover w-full h-full object-bottom"
+      class="absolute object-cover w-full h-full object-right-bottom"
       alt=""
     />
 
     <BgVideo
       :src="require('@/assets/videos/webm/3.webm')"
-      class="object-bottom"
+      class="object-right-bottom"
       :end="0.31"
       :start="0.4"
     />
 
-    <div class="relative my-12 mr-64 p4-64 flex flex-col justify-between">
-      <Header>
+    <div
+      class="relative my-12 mr-64 pr-64 desktop:pr-64 flex flex-col justify-between"
+    >
+      <Header class="desktop:mt-12">
         <template v-slot:name>Наталья Викторовна</template>
         дружественный психиатр
       </Header>
-      <Story maxLimitMini :storyText="storyText" />
+      <Story class="desktop:mt-32" maxLimitMini :storyText="storyText" />
     </div>
   </div>
 </template>

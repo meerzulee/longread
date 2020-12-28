@@ -32,7 +32,7 @@
           </svg>
         </a>
         <div
-          class="outro-container overflow-y-auto h-full pr-10 pb-40 mt-20 text-white"
+          class="outro-container overflow-y-auto h-full pr-10 pb-40 my-20 text-white"
         >
           <h3 class="text-4xl font-bold mb-12">{{ name }}</h3>
           <p class="text-xl font-normal whitespace-pre-line" v-html="text"></p>

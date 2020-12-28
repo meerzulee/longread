@@ -8,6 +8,38 @@ html {
 html{
   margin: 0
 }
+
+@screen desktop{
+  html {
+      /* 1rem 14px 14/16=87.5 */
+      font-size: 87.5%
+  }
+}
+@screen laptop{
+  html {
+      /* 1rem 13px 13/16=81.25 */
+      font-size: 81.25%
+  }
+}
+@screen laptop-mini{
+  html {
+      /* 1rem 12px 12/16 */
+      font-size: 75%
+  }
+}
+@screen tablet{
+  html {
+      /* 1rem 10px 10/16 */
+      font-size: 62.5%
+  }
+}
+  @screen tablet-mini{
+    html {
+        /* 1rem 10px 10/16 */
+        font-size: 62.5%
+    }
+}
+
 @tailwind components;
     
 @tailwind utilities;
@@ -31,16 +63,21 @@ html{
 }
 .story {
     max-width: 472px;
-   
 }
 .story-width{
   max-width: 472px;
 }
 
 .story-half {
-  
   max-height: 456px;
 }
+
+@screen desktop{
+  .story {
+    max-width: 400px;
+}
+}
+
 .navbar-menu{
   height: 800px;
   max-height: 800px;
@@ -49,6 +86,7 @@ html{
 .navbar-container{
   max-width: 1452px;
 }
+
 .navbar-container:after {
   content: "";
   flex: auto;
@@ -59,6 +97,20 @@ html{
 }
 .outro-container{
   max-width: 1000px;
+}
+@screen desktop{
+  .navbar-container{
+    max-width: 1200px;
+    
+  }
+  .navbar-menu{
+     height: 100vh;
+   
+  }
+  .navbar-rect {
+    width: 226px;
+    height: 140px;
+  }
 }
 .modal{
   width: 336px;

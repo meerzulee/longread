@@ -18,7 +18,9 @@
       :end="0.6"
     />
 
-    <div class="relative my-16 mr-64 pr-32 flex flex-col justify-between">
+    <div
+      class="relative my-16 mr-64 pr-32 desktop:pr-0 flex flex-col justify-between"
+    >
       <Header>
         <template v-slot:name>Диас</template>
         транс-мужчина, активист, 24 года

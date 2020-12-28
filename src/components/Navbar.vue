@@ -65,11 +65,11 @@
     <transition name="menu-down">
       <div
         v-if="toggleMenu"
-        class="absolute z-40 top-0 w-full bg-primary-dark navbar-menu"
+        class="absolute flex z-40 top-0 w-full desktop:pb-20 bg-primary-dark desktop:items-center navbar-menu"
       >
-        <div class="navbar-container mx-auto mt-20 flex flex-wrap">
+        <div class="navbar-container mx-auto h-auto mt-20 flex flex-wrap">
           <div
-            class="navbar-rect my-10 mx-2 cursor-pointer group rounded-md text-white hover:bg-secondary flex justify-center items-center"
+            class="navbar-rect my-10 desktop:my-4 mx-2 cursor-pointer group rounded-md text-white hover:bg-secondary flex justify-center items-center"
             v-for="(item, index) in items"
             @click="navigateTo(item.link)"
             :key="index"

@@ -10,9 +10,11 @@
       class="object-left-bottom"
       :end="0.6"
     />
-    <div class="relative my-16 mr-360p flex flex-col justify-between">
+    <div
+      class="relative my-16 mr-360p desktop:mr-64 flex flex-col justify-between"
+    >
       <Header>
-        <template v-slot:name>Адилет</template>
+        <template class="desktop:mt-16" v-slot:name>Адилет</template>
         директор ЛГБТ-организации «Кыргыз Индиго», <br />
         24 года
       </Header>

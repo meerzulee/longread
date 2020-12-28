@@ -4,6 +4,33 @@ module.exports = {
     fontFamily: {
       'body': ['Piazzolla']
     },
+    screens: {
+      'big-desktop': {
+        // <1800px
+        min: '100.1em',
+      },
+      'desktop': {
+        // <1600px
+        max: '100em',
+      },
+      'laptop': {
+        // <1440px
+        max: '90em',
+      },
+      'laptop-mini': {
+        // <1360px
+        max: '85em',
+      },
+      'tablet': {
+        // <1280px
+        max: '80em',
+      },
+      'tablet-mini': {
+        // <1000px
+        max: '62.5em',
+      }
+
+    },
     extend: {
       width: {
         '30r': '30rem'
