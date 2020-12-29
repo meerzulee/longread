@@ -9,8 +9,8 @@
     <BgVideo
       :src="require('@/assets/videos/webm/3.webm')"
       class="object-right-bottom"
-      :end="0.31"
-      :start="0.4"
+      :start="0.31"
+      :end="0.5"
     />
 
     <div

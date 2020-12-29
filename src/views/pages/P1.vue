@@ -7,19 +7,19 @@
     />
     -->
 
-    <!-- <BgVideo
-      :src="require('@/assets/videos/mp4/test1.mp4')"
+    <BgVideo
+      :src="require('@/assets/videos/webm/1.webm')"
       class="object-right-bottom"
       :start="0.5"
-      :end="0.7"
-    /> -->
-    <video
+      :end="0.8"
+    />
+    <!-- <video
       autoplay
       :src="require('@/assets/videos/mp4/test1c.mp4')"
       class="absolute w-full object-cover object-right-bottom h-full"
       loop
       muted
-    />
+    /> -->
     <div
       class="relative py-12 h-full desktop:ml-24 flex flex-col justify-between"
     >

@@ -1,13 +1,14 @@
 <template>
   <video
     autoplay
-    :src="src"
     class="absolute w-full object-cover h-full"
     alt=""
     ref="bgvid"
     @timeupdate="loop($event)"
     muted
-  />
+  >
+    <source :src="src" type="video/webm" />
+  </video>
 </template>
 
 <script>

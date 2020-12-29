@@ -9,6 +9,7 @@
     <BgVideo
       :src="require('@/assets/videos/webm/2.webm')"
       class="object-left-bottom"
+      :end="0.7"
     />
     <!-- <video
       loop

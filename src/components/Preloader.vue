@@ -20,36 +20,37 @@
           alt=""
         />
         <video
-          :src="require('@/assets/videos/webm/' + v1 + '.webm')"
           v-for="(v1, index) in 4"
           @loadeddata="loadStage1('video ' + v1)"
           :key="'V1' + index"
           alt=""
           muted
           preload="auto"
-        />
-        <video
-          :src="require('@/assets/videos/webm/intro.webm')"
-          @loadeddata="loadStage1('intro')"
-          alt=""
-          muted
-          preload="auto"
-        />
+        >
+          <source
+            :src="require('@/assets/videos/webm/' + v1 + '.webm')"
+            type="video/webm"
+          />
+        </video>
+        <video @loadeddata="loadStage1('intro')" alt="" muted preload="auto">
+          <source
+            :src="require('@/assets/videos/webm/intro.webm')"
+            type="video/webm"
+          />
+        </video>
 
-        <video
-          :src="require('@/assets/videos/intro.webm')"
-          @loadeddata="loadStage1('introbg')"
-          alt=""
-          muted
-          preload="auto"
-        />
-        <video
-          :src="require('@/assets/videos/webm/song.webm')"
-          @loadeddata="loadStage1('song')"
-          alt=""
-          muted
-          preload="auto"
-        />
+        <video @loadeddata="loadStage1('introbg')" alt="" muted preload="auto">
+          <source
+            :src="require('@/assets/videos/intro.webm')"
+            type="video/webm"
+          />
+        </video>
+        <video @loadeddata="loadStage1('song')" alt="" muted preload="auto">
+          <source
+            :src="require('@/assets/videos/webm/song.webm')"
+            type="video/webm"
+          />
+        </video>
       </div>
       <!-- stage 2 -->
       <div class="hidden" v-if="stage1Loaded">
@@ -61,23 +62,31 @@
           alt=""
         />
         <video
-          :src="require('@/assets/videos/webm/' + (v2 + 4) + '.webm')"
           v-for="(v2, index) in 5"
           @loadeddata="loadStage2('video ' + (v2 + 4))"
           :key="'V2' + index"
           alt=""
           muted
           preload="auto"
-        />
+        >
+          <source
+            :src="require('@/assets/videos/webm/' + (v2 + 4) + '.webm')"
+            type="video/webm"
+          />
+        </video>
         <video
-          :src="require('@/assets/videos/thumbs/' + t + '.mp4')"
           v-for="(t, index) in 13"
           @loadeddata="loadStage2('thumbs ' + t)"
           :key="'t' + index"
           alt=""
           muted
           preload="auto"
-        />
+        >
+          <source
+            :src="require('@/assets/videos/thumbs/' + t + '.mp4')"
+            type="video/mp4"
+          />
+        </video>
       </div>
       <!-- stage 3 -->
       <div class="hidden" v-if="stage2Loaded">
@@ -89,30 +98,37 @@
           alt=""
         />
         <video
-          :src="require('@/assets/videos/webm/' + (v3 + 9) + '.webm')"
           v-for="(v3, index) in 4"
           @loadeddata="loadStage3('video ' + (v3 + 9))"
           :key="'V3' + index"
           alt=""
           muted
           preload="auto"
-        />
+        >
+          <source
+            :src="require('@/assets/videos/webm/' + (v3 + 9) + '.webm')"
+            type="video/webm"
+          />
+        </video>
+        <video @loadeddata="loadStage3('ending')" alt="" muted preload="auto">
+          <source
+            :src="require('@/assets/videos/end.webm')"
+            type="video/webm"
+          />
+        </video>
         <video
-          :src="require('@/assets/videos/end.webm')"
-          @loadeddata="loadStage3('ending')"
-          alt=""
-          muted
-          preload="auto"
-        />
-        <video
-          :src="require('@/assets/videos/outro/' + o + '.webm')"
           v-for="(o, index) in ['Sveta', 'Tal', 'Maya', 'Diana']"
           @loadeddata="loadStage3('outro ' + o)"
           :key="'O' + index"
           alt=""
           muted
           preload="auto"
-        />
+        >
+          <source
+            :src="require('@/assets/videos/outro/' + o + '.webm')"
+            type="video/webm"
+          />
+        </video>
       </div>
     </div>
   </div>
