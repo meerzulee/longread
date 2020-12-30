@@ -7,6 +7,7 @@
       autoplay
       loop
     ></video>
+
     <transition name="modal-up">
       <div
         v-if="toggleModal"

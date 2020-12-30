@@ -2,6 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from "./store";
+import browserDetect from "vue-browser-detect-plugin";
+
+Vue.use(browserDetect);
 // import VuePlyr from 'vue-plyr'
 // import 'vue-plyr/dist/vue-plyr.css'
 // 

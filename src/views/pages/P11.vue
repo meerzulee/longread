@@ -1,10 +1,10 @@
 <template>
   <div class="h-screen bg-blue-900 relative flex justify-center">
-    <img
+    <!-- <img
       src="@/assets/images/backgrounds/11.jpg"
       class="absolute object-cover w-full h-full object-left-bottom"
       alt=""
-    />
+    /> -->
     <!-- <video
       loop
       autoplay
@@ -13,9 +13,8 @@
       alt=""
     /> -->
     <BgVideo
-      :src="require('@/assets/videos/webm/11.webm')"
+      :src="require('@/assets/videos/mp4/11.mp4')"
       class="object-left-bottom"
-      :end="0.8"
     />
 
     <div class="relative my-12 ml-24 tablet:ml-56 flex flex-col justify-start">
@@ -36,8 +35,9 @@ export default {
   data() {
     return {
       storyText: `- Мне не нравится ходить в ЛГБТ-клуб постоянно, потому что публика там иногда может харассить, постоянно происходят какие-то драки, стычки и скандалы. 
-
-Почему я все-таки туда хожу? Мне нравится ощущение того, что люди счастливы. Например, парень сидит на коленях у другого парня, они целуются и вообще все окей. Мне нравится ходить в клуб только за ощущением того, что люди свободны.`,
+      
+Почему я все-таки туда хожу? Мне нравится ощущение того, что люди счастливы. Например, парень сидит на коленях у другого парня, они целуются и вообще все окей. Мне нравится ходить в клуб только за ощущением того, что люди свободны.
+`,
     }
   },
 }

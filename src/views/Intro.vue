@@ -17,11 +17,10 @@
     </vue-plyr> -->
 
     <BgVideo
-      :src="require('@/assets/videos/intro.webm')"
-      :start="0"
-      class="object-bottom"
+      :src="require('@/assets/videos/intro.mp4')"
+      class="object-right-bottom"
     />
-    <BgVideo :src="require('@/assets/videos/webm/intro.webm')" :end="0.65" />
+    <!-- <BgVideo :src="require('@/assets/videos/webm/intro.webm')" :end="0.65" /> -->
 
     <div
       class="absolute bottom-0 left-1/2 ml-1 flex flex-col items-center mb-14 w-30r"
@@ -32,8 +31,8 @@
         Идите прямо, затем поверните налево, затем еще раз налево. Увидите
         лестницу вниз, спускайтесь. Там темно, так что будьте аккуратнее. Лучше
         придерживаться за стену по правую руку и подсветить фонариком. Чтобы
-        открыть дверь немного сильнее подтолкните. В воздухе пахнет дымом,
-        разными духами и алкоголем…
+        открыть дверь, немного сильнее толкните. В воздухе пахнет дымом, разными
+        духами и алкоголем...
       </p>
       <div>
         <a

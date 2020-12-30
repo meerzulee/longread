@@ -6,8 +6,9 @@
     ref="bgvid"
     @timeupdate="loop($event)"
     muted
+    playsinline
   >
-    <source :src="src" type="video/webm" />
+    <source :src="src" type="video/mp4" />
   </video>
 </template>
 
@@ -17,11 +18,11 @@ export default {
     src: String,
     start: {
       type: Number,
-      default: 0.5,
+      default: 0,
     },
     end: {
       type: Number,
-      default: 0.5,
+      default: 0,
     },
   },
   mounted() {
