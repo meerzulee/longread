@@ -12,13 +12,7 @@
       <!-- stage 1 -->
       <div class="hidden" v-if="!stage1Loaded">
         <!-- stage 1 -->
-        <!-- <img
-          :src="require('@/assets/images/backgrounds/' + s1 + '.jpg')"
-          v-for="(s1, index) in 4"
-          @load="loadStage1('img ' + s1)"
-          :key="'S1' + index"
-          alt=""
-        /> -->
+
         <video
           v-for="(v1, index) in 4"
           @loadeddata="loadStage1('video ' + v1)"
@@ -28,11 +22,7 @@
           muted
           autoplay
           preload="auto"
-        >
-          <!-- <source
-            type="video/mp4"
-          /> -->
-        </video>
+        ></video>
         <video
           autoplay
           :src="require('@/assets/videos/mp4/intro.mp4')"
@@ -40,18 +30,8 @@
           alt=""
           muted
           preload="auto"
-        >
-          <!-- <source
-            type="video/mp4"
-          /> -->
-        </video>
+        ></video>
 
-        <!-- <video @loadeddata="loadStage1('introbg')" alt="" muted preload="auto">
-          <source
-            :src="require('@/assets/videos/intro.webm')"
-            type="video/webm"
-          />
-        </video> -->
         <video
           autoplay
           :src="require('@/assets/videos/mp4/song.mp4')"
@@ -59,21 +39,10 @@
           alt=""
           muted
           preload="auto"
-        >
-          <!-- <source
-            type="video/mp4"
-          /> -->
-        </video>
+        ></video>
       </div>
       <!-- stage 2 -->
       <div class="hidden" v-if="stage1Loaded">
-        <!-- <img
-          :src="require('@/assets/images/backgrounds/' + (s2 + 4) + '.jpg')"
-          v-for="(s2, index) in 5"
-          @load="loadStage2('img ' + (s2 + 4))"
-          :key="'S2' + index"
-          alt=""
-        /> -->
         <video
           v-for="(v2, index) in 5"
           @loadeddata="loadStage2('video ' + (v2 + 4))"
@@ -102,14 +71,7 @@
         </video>
       </div>
       <!-- stage 3 -->
-      <div class="hidden" v-if="stage2Loaded">
-        <!-- <img
-          :src="require('@/assets/images/backgrounds/' + (s3 + 9) + '.jpg')"
-          v-for="(s3, index) in 4"
-          @load="loadStage3('img ' + (s3 + 9))"
-          :key="'S3' + index"
-          alt=""
-        /> -->
+      <div class="hidden" v-if="stage2Loaded && !stage3Loaded">
         <video
           v-for="(v3, index) in 4"
           @loadeddata="loadStage3('video ' + (v3 + 9))"
@@ -127,7 +89,7 @@
           <source :src="require('@/assets/videos/end.mp4')" type="video/mp4" />
         </video>
         <video
-          v-for="(o, index) in ['Sveta', 'Tal', 'Maya', 'Diana']"
+          v-for="(o, index) in ['sveta', 'talgat', 'maya', 'diana']"
           @loadeddata="loadStage3('outro ' + o)"
           :key="'O' + index"
           alt=""
@@ -167,8 +129,11 @@ export default {
     }
   },
   mounted() {
+    console.log('fuck')
     this.isLoaded = false
-    this.imgCounter = 0
+    this.stage1Count = 0
+    this.stage2Count = 0
+    this.stage3Count = 0
 
     this.stage1Loaded = false
     this.stage2Loaded = false
@@ -178,7 +143,6 @@ export default {
   methods: {
     loadStage1(e) {
       console.log(e)
-      console.log(this.$root.$browserDetect.isSafari)
       this.stage1Count++
       if (this.stage1Count === 6) {
         this.stage1Loaded = true
