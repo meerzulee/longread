@@ -15,7 +15,7 @@
 
         <video
           v-for="(v1, index) in 4"
-          @loadeddata="loadStage1('video ' + v1)"
+          @canplay="loadStage1('video ' + v1)"
           :key="'V1' + index"
           alt=""
           muted
@@ -30,7 +30,7 @@
 
         <video
           autoplay
-          @loadeddata="loadStage1('intro')"
+          @canplay="loadStage1('intro')"
           alt=""
           muted
           preload="auto"
@@ -43,7 +43,7 @@
 
         <video
           autoplay
-          @loadeddata="loadStage1('song')"
+          @canplay="loadStage1('song')"
           alt=""
           muted
           preload="auto"
@@ -173,10 +173,10 @@ export default {
     },
     loadStage3(e) {
       console.log(e)
-      this.stage2Count++
-      if (this.stage2Count === 9) {
+      this.stage3Count++
+      if (this.stage3Count === 9) {
         this.stage3Loaded = true
-        console.log('Stage 2 completed')
+        console.log('Stage 3 completed')
       }
     },
 
