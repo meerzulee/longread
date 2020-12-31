@@ -16,30 +16,41 @@
         <video
           v-for="(v1, index) in 4"
           @loadeddata="loadStage1('video ' + v1)"
-          :src="require('@/assets/videos/mp4/' + v1 + '.mp4')"
           :key="'V1' + index"
           alt=""
           muted
           autoplay
           preload="auto"
         ></video>
+        <source
+          :src="require('@/assets/videos/mp4/' + v1 + '.mp4')"
+          type="video/mp4"
+        />
         <video
           autoplay
-          :src="require('@/assets/videos/mp4/intro.mp4')"
           @loadeddata="loadStage1('intro')"
           alt=""
           muted
           preload="auto"
-        ></video>
+        >
+          <source
+            :src="require('@/assets/videos/mp4/intro.mp4')"
+            type="video/mp4"
+          />
+        </video>
 
         <video
           autoplay
-          :src="require('@/assets/videos/mp4/song.mp4')"
           @loadeddata="loadStage1('song')"
           alt=""
           muted
           preload="auto"
-        ></video>
+        >
+          <source
+            :src="require('@/assets/videos/mp4/song.mp4')"
+            type="video/mp4"
+          />
+        </video>
       </div>
       <!-- stage 2 -->
       <div class="hidden" v-if="stage1Loaded">
