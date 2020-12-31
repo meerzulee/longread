@@ -18,7 +18,7 @@
           class="flex my-4 text-white items-center flex-col"
         >
           <h1 class="text-2xl mb-1 text-center px-4">
-            Пожалуйста переверните устройства чтоб открыть сайт
+            Пожалуйста переверните устройство чтоб открыть сайт
           </h1>
         </div>
 
