@@ -7,11 +7,12 @@
       >
         <div
           v-if="isMobile"
-          class="flex my-4 text-center text-white items-center flex-col"
+          class="flex my-4 text-center text-white items-center px-4 flex-col"
         >
-          <h1 class="text-2xl mb-1 px-4">
+          <h1 class="text-2xl mb-1">
             Мобильная версия сайта находиться в стадии разработки
           </h1>
+          <p>Данный проект доступен с компьютеров</p>
         </div>
         <div
           v-else-if="isPortrait"
