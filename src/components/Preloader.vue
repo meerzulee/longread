@@ -21,11 +21,13 @@
           muted
           autoplay
           preload="auto"
-        ></video>
-        <source
-          :src="require('@/assets/videos/mp4/' + v1 + '.mp4')"
-          type="video/mp4"
-        />
+        >
+          <source
+            :src="require('@/assets/videos/mp4/' + v1 + '.mp4')"
+            type="video/mp4"
+          />
+        </video>
+
         <video
           autoplay
           @loadeddata="loadStage1('intro')"
