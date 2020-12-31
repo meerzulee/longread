@@ -2,12 +2,30 @@
   <div>
     <transition name="fade" mode="in-out">
       <div
-        v-if="!this.$store.state.loaded"
-        class="absolute h-screen inset-0 bg-primary-dark w-screen flex items-center justify-center preloader-z"
+        v-if="checkScreen"
+        class="absolute h-screen inset-0 bg-primary-dark w-screen flex flex-col items-center justify-center preloader-z"
       >
+        <div
+          v-if="isMobile"
+          class="flex my-4 text-center text-white items-center flex-col"
+        >
+          <h1 class="text-2xl mb-1 px-4">
+            Мобильная версия сайта находиться в стадии разработки
+          </h1>
+        </div>
+        <div
+          v-else-if="isPortrait"
+          class="flex my-4 text-white items-center flex-col"
+        >
+          <h1 class="text-2xl mb-1 text-center px-4">
+            Пожалуйста переверните устройства чтоб открыть сайт
+          </h1>
+        </div>
+
         <IntersectingCirclesSpinner :size="100" color="#CD6EF0" />
       </div>
     </transition>
+
     <div v-if="!isLoaded">
       <!-- stage 1 -->
       <div class="hidden" v-if="!stage1Loaded">
@@ -15,7 +33,7 @@
 
         <video
           v-for="(v1, index) in 4"
-          @canplay="loadStage1('video ' + v1)"
+          @loadeddata="loadStage1('video ' + v1, $event)"
           :key="'V1' + index"
           alt=""
           muted
@@ -30,7 +48,7 @@
 
         <video
           autoplay
-          @canplay="loadStage1('intro')"
+          @loadeddata="loadStage1('intro', $event)"
           alt=""
           muted
           preload="auto"
@@ -43,7 +61,7 @@
 
         <video
           autoplay
-          @canplay="loadStage1('song')"
+          @loadeddata="loadStage1('song', $event)"
           alt=""
           muted
           preload="auto"
@@ -141,8 +159,28 @@ export default {
       stage3Count: 0,
     }
   },
+  computed: {
+    isMobile() {
+      return (
+        this.$screen.height < this.$screen.config.mobile &&
+        this.$screen.width < this.$screen.config.mobile
+      )
+    },
+    isPortrait() {
+      return (
+        this.$screen.height > this.$screen.config.mobile &&
+        this.$screen.portrait &&
+        this.$screen.width < this.$screen.config.mobile
+      )
+    },
+    checkScreen() {
+      // console.log(this.isMobile)
+      // console.log(this.isPortrait)
+      return !(this.$store.state.loaded && !(this.isMobile || this.isPortrait))
+    },
+  },
   mounted() {
-    console.log('fuck')
+    // console.log('fuck')
     this.isLoaded = false
     this.stage1Count = 0
     this.stage2Count = 0
@@ -154,25 +192,28 @@ export default {
   },
 
   methods: {
-    loadStage1(e) {
-      console.log(e)
-      this.stage1Count++
-      if (this.stage1Count === 6) {
-        this.stage1Loaded = true
-        console.log('Stage 1 completed')
-        this.check()
+    loadStage1() {
+      // console.log(e)
+      // console.log(event.target.readyState)
+      if (event.target.readyState > 2) {
+        this.stage1Count++
+        if (this.stage1Count === 6) {
+          this.stage1Loaded = true
+          console.log('Stage 1 completed')
+          this.check()
+        }
       }
     },
-    loadStage2(e) {
-      console.log(e)
+    loadStage2() {
+      // console.log(e)
       this.stage2Count++
       if (this.stage2Count === 18) {
         this.stage2Loaded = true
         console.log('Stage 2 completed')
       }
     },
-    loadStage3(e) {
-      console.log(e)
+    loadStage3() {
+      // console.log(e)
       this.stage3Count++
       if (this.stage3Count === 9) {
         this.stage3Loaded = true
