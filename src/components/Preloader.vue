@@ -34,7 +34,7 @@
 
         <video
           v-for="(v1, index) in 4"
-          @loadeddata="loadStage1('video ' + v1, $event)"
+          @canplaythrough="loadStage1('video ' + v1, $event)"
           :key="'V1' + index"
           alt=""
           muted
@@ -49,7 +49,7 @@
 
         <video
           autoplay
-          @loadeddata="loadStage1('intro', $event)"
+          @canplaythrough="loadStage1('intro', $event)"
           alt=""
           muted
           preload="auto"
@@ -62,7 +62,7 @@
 
         <video
           autoplay
-          @loadeddata="loadStage1('song', $event)"
+          @canplaythrough="loadStage1('song', $event)"
           alt=""
           muted
           preload="auto"
@@ -77,7 +77,7 @@
       <div class="hidden" v-if="stage1Loaded">
         <video
           v-for="(v2, index) in 5"
-          @loadeddata="loadStage2('video ' + (v2 + 4))"
+          @canplaythrough="loadStage2('video ' + (v2 + 4))"
           :key="'V2' + index"
           alt=""
           muted
@@ -96,7 +96,7 @@
         </video>
         <video
           v-for="(t, index) in 13"
-          @loadeddata="loadStage2('thumbs ' + t)"
+          @canplaythrough="loadStage2('thumbs ' + t)"
           :key="'t' + index"
           alt=""
           muted
@@ -112,7 +112,7 @@
       <div class="hidden" v-if="stage2Loaded && !stage3Loaded">
         <video
           v-for="(v3, index) in 4"
-          @loadeddata="loadStage3('video ' + (v3 + 9))"
+          @canplaythrough="loadStage3('video ' + (v3 + 9))"
           :key="'V3' + index"
           alt=""
           muted
@@ -125,7 +125,12 @@
             type="video/mp4"
           />
         </video>
-        <video @loadeddata="loadStage3('ending')" alt="" muted preload="auto">
+        <video
+          @canplaythrough="loadStage3('ending')"
+          alt=""
+          muted
+          preload="auto"
+        >
           <source
             src="http://walkerstory.com/wp-content/uploads/2021/01/end.mp4"
             type="video/mp4"
@@ -133,7 +138,7 @@
         </video>
         <video
           v-for="(o, index) in ['sveta', 'talgat', 'maya', 'diana']"
-          @loadeddata="loadStage3('outro ' + o)"
+          @canplaythrough="loadStage3('outro ' + o)"
           :key="'O' + index"
           alt=""
           muted
