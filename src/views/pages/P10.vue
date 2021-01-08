@@ -12,8 +12,13 @@
       class="absolute object-cover w-full h-full"
       alt=""
     /> -->
+    <!-- 
     <BgVideo
       :src="require('@/assets/videos/mp4/10.mp4')"
+      class="object-left-bottom"
+    /> -->
+    <BgVideo
+      src="http://walkerstory.com/wp-content/uploads/2021/01/10.mp4"
       class="object-left-bottom"
     />
 

@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="relative">
-    <Preloader v-if="false" />
+    <Preloader />
     <Navbar />
 
     <transition

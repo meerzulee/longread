@@ -42,7 +42,7 @@
           preload="auto"
         >
           <source
-            :src="require('@/assets/videos/mp4/' + v1 + '.mp4')"
+            :src="`http://walkerstory.com/wp-content/uploads/2021/01/${v1}.mp4`"
             type="video/mp4"
           />
         </video>
@@ -55,7 +55,7 @@
           preload="auto"
         >
           <source
-            :src="require('@/assets/videos/mp4/intro.mp4')"
+            src="http://walkerstory.com/wp-content/uploads/2021/01/intro.mp4"
             type="video/mp4"
           />
         </video>
@@ -68,7 +68,7 @@
           preload="auto"
         >
           <source
-            :src="require('@/assets/videos/mp4/song.mp4')"
+            src="http://walkerstory.com/wp-content/uploads/2021/01/song.mp4"
             type="video/mp4"
           />
         </video>
@@ -83,8 +83,14 @@
           muted
           preload="auto"
         >
-          <source
+          <!-- <source
             :src="require('@/assets/videos/mp4/' + (v2 + 4) + '.mp4')"
+            type="video/mp4"
+          />  -->
+          <source
+            :src="`http://walkerstory.com/wp-content/uploads/2021/01/${
+              v2 + 4
+            }.mp4`"
             type="video/mp4"
           />
         </video>
@@ -97,7 +103,7 @@
           preload="auto"
         >
           <source
-            :src="require('@/assets/videos/thumbs/' + t + '.mp4')"
+            :src="`http://walkerstory.com/wp-content/uploads/2021/01/th${t}.mp4`"
             type="video/mp4"
           />
         </video>
@@ -113,12 +119,17 @@
           preload="auto"
         >
           <source
-            :src="require('@/assets/videos/mp4/' + (v3 + 9) + '.mp4')"
+            :src="`http://walkerstory.com/wp-content/uploads/2021/01/${
+              v3 + 9
+            }.mp4`"
             type="video/mp4"
           />
         </video>
         <video @loadeddata="loadStage3('ending')" alt="" muted preload="auto">
-          <source :src="require('@/assets/videos/end.mp4')" type="video/mp4" />
+          <source
+            src="http://walkerstory.com/wp-content/uploads/2021/01/end.mp4"
+            type="video/mp4"
+          />
         </video>
         <video
           v-for="(o, index) in ['sveta', 'talgat', 'maya', 'diana']"
@@ -129,7 +140,7 @@
           preload="auto"
         >
           <source
-            :src="require('@/assets/videos/outro/' + o + '.mp4')"
+            :src="`http://walkerstory.com/wp-content/uploads/2021/01/${o}.mp4`"
             type="video/mp4"
           />
         </video>
@@ -140,7 +151,7 @@
 
 <script>
 import 'epic-spinners/dist/lib/epic-spinners.min.css'
-
+// import axios from 'axios'
 import { IntersectingCirclesSpinner } from 'epic-spinners/dist/lib/epic-spinners.min.js'
 
 export default {
@@ -181,7 +192,7 @@ export default {
     },
   },
   mounted() {
-    // console.log('fuck')
+    console.log('fuck')
     this.isLoaded = false
     this.stage1Count = 0
     this.stage2Count = 0

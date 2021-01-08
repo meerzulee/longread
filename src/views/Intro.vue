@@ -1,7 +1,11 @@
 <template>
   <div class="intro h-screen bg-teal-600 relative">
-    <BgVideo
+    <!-- <BgVideo
       :src="require('@/assets/videos/intro.mp4')"
+      class="object-center"
+    /> -->
+    <BgVideo
+      src="http://walkerstory.com/wp-content/uploads/2021/01/intro.mp4"
       class="object-center"
     />
     <!-- <BgVideo :src="require('@/assets/videos/webm/intro.webm')" :end="0.65" /> -->

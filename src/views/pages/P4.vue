@@ -5,8 +5,13 @@
       class="absolute object-cover w-full h-full object-left-bottom"
       alt=""
     /> -->
-    <BgVideo
+
+    <!-- <BgVideo
       :src="require('@/assets/videos/mp4/4.mp4')"
+      class="object-left-bottom"
+    />   -->
+    <BgVideo
+      src="http://walkerstory.com/wp-content/uploads/2021/01/4.mp4"
       class="object-left-bottom"
     />
     <!-- <video

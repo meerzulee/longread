@@ -6,8 +6,12 @@
       alt=""
     /> -->
 
-    <BgVideo
+    <!-- <BgVideo
       :src="require('@/assets/videos/mp4/1.mp4')"
+      class="object-right-bottom"
+    /> -->
+    <BgVideo
+      src="http://walkerstory.com/wp-content/uploads/2021/01/1.mp4"
       class="object-right-bottom"
     />
     <!-- <video
