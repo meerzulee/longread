@@ -40,6 +40,7 @@
           muted
           autoplay
           preload="auto"
+          playsinline
         >
           <source
             :src="`https://walkerstory.com/wp-content/uploads/2021/01/${v1}.mp4`"
@@ -53,6 +54,7 @@
           alt=""
           muted
           preload="auto"
+          playsinline
         >
           <source
             src="https://walkerstory.com/wp-content/uploads/2021/01/intro.mp4"
@@ -66,6 +68,7 @@
           alt=""
           muted
           preload="auto"
+          playsinline
         >
           <source
             src="https://walkerstory.com/wp-content/uploads/2021/01/song.mp4"
@@ -82,6 +85,7 @@
           alt=""
           muted
           preload="auto"
+          playsinline
         >
           <!-- <source
             :src="require('@/assets/videos/mp4/' + (v2 + 4) + '.mp4')"
