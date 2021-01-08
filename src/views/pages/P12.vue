@@ -17,7 +17,7 @@
       class="object-right-bottom"
     /> -->
     <BgVideo
-      src="http://walkerstory.com/wp-content/uploads/2021/01/12.mp4"
+      src="https://walkerstory.com/wp-content/uploads/2021/01/12.mp4"
       class="object-right-bottom"
     />
 

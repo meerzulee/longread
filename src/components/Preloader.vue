@@ -42,7 +42,7 @@
           preload="auto"
         >
           <source
-            :src="`http://walkerstory.com/wp-content/uploads/2021/01/${v1}.mp4`"
+            :src="`https://walkerstory.com/wp-content/uploads/2021/01/${v1}.mp4`"
             type="video/mp4"
           />
         </video>
@@ -55,7 +55,7 @@
           preload="auto"
         >
           <source
-            src="http://walkerstory.com/wp-content/uploads/2021/01/intro.mp4"
+            src="https://walkerstory.com/wp-content/uploads/2021/01/intro.mp4"
             type="video/mp4"
           />
         </video>
@@ -68,7 +68,7 @@
           preload="auto"
         >
           <source
-            src="http://walkerstory.com/wp-content/uploads/2021/01/song.mp4"
+            src="https://walkerstory.com/wp-content/uploads/2021/01/song.mp4"
             type="video/mp4"
           />
         </video>
@@ -88,7 +88,7 @@
             type="video/mp4"
           />  -->
           <source
-            :src="`http://walkerstory.com/wp-content/uploads/2021/01/${
+            :src="`https://walkerstory.com/wp-content/uploads/2021/01/${
               v2 + 4
             }.mp4`"
             type="video/mp4"
@@ -103,7 +103,7 @@
           preload="auto"
         >
           <source
-            :src="`http://walkerstory.com/wp-content/uploads/2021/01/th${t}.mp4`"
+            :src="`https://walkerstory.com/wp-content/uploads/2021/01/th${t}.mp4`"
             type="video/mp4"
           />
         </video>
@@ -119,7 +119,7 @@
           preload="auto"
         >
           <source
-            :src="`http://walkerstory.com/wp-content/uploads/2021/01/${
+            :src="`https://walkerstory.com/wp-content/uploads/2021/01/${
               v3 + 9
             }.mp4`"
             type="video/mp4"
@@ -132,7 +132,7 @@
           preload="auto"
         >
           <source
-            src="http://walkerstory.com/wp-content/uploads/2021/01/end.mp4"
+            src="https://walkerstory.com/wp-content/uploads/2021/01/end.mp4"
             type="video/mp4"
           />
         </video>
@@ -145,7 +145,7 @@
           preload="auto"
         >
           <source
-            :src="`http://walkerstory.com/wp-content/uploads/2021/01/${o}.mp4`"
+            :src="`https://walkerstory.com/wp-content/uploads/2021/01/${o}.mp4`"
             type="video/mp4"
           />
         </video>

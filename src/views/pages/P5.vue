@@ -19,7 +19,7 @@
     /> -->
 
     <BgVideo
-      src="http://walkerstory.com/wp-content/uploads/2021/01/5.mp4"
+      src="https://walkerstory.com/wp-content/uploads/2021/01/5.mp4"
       class="object-bottom"
     />
 

@@ -5,7 +5,7 @@
       class="object-center"
     /> -->
     <BgVideo
-      src="http://walkerstory.com/wp-content/uploads/2021/01/intro.mp4"
+      src="https://walkerstory.com/wp-content/uploads/2021/01/intro.mp4"
       class="object-center"
     />
     <!-- <BgVideo :src="require('@/assets/videos/webm/intro.webm')" :end="0.65" /> -->

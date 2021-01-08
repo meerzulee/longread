@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen relative flex justify-center">
     <!-- <BgVideo :src="require('@/assets/videos/end.mp4')" /> -->
-    <BgVideo src="http://walkerstory.com/wp-content/uploads/2021/01/end.mp4" />
+    <BgVideo src="https://walkerstory.com/wp-content/uploads/2021/01/end.mp4" />
     <div
       class="absolute inset-0 h-full w-full flex justify-center items-center"
     >

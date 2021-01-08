@@ -3,7 +3,7 @@
     <video
       loop
       autoplay
-      src="http://walkerstory.com/wp-content/uploads/2021/01/song.mp4"
+      src="https://walkerstory.com/wp-content/uploads/2021/01/song.mp4"
       class="absolute object-cover w-full h-full"
       alt=""
     />
