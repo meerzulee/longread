@@ -27,6 +27,7 @@ export default {
   },
   mounted() {
     this.$refs.bgvid.play()
+    this.$refs.bgvid.load()
   },
   methods: {
     loop(e) {

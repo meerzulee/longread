@@ -3,11 +3,15 @@ import App from './App.vue'
 import router from './router'
 import store from "./store";
 import VueScreen from 'vue-screen';
+import browserDetect from "vue-browser-detect-plugin";
+
+
 
 Vue.use(VueScreen, {
   'mobile': 992,
 
 });
+Vue.use(browserDetect);
 
 Vue.component('BgVideo', () => import('@/components/BgVideo.vue'))
 

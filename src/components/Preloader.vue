@@ -27,29 +27,27 @@
       </div>
     </transition>
 
-    <div v-if="!isLoaded">
+    <div class="hidden" v-if="!isLoaded">
       <!-- stage 1 -->
-      <div class="hidden" v-if="!stage1Loaded">
+      <div v-if="!stage1Loaded">
         <!-- stage 1 -->
-
         <video
-          v-for="(v1, index) in 4"
-          @canplaythrough="loadStage1('video ' + v1, $event)"
-          :key="'V1' + index"
+          v-for="(vi1, index) in 4"
+          @canplaythrough="loadStage1('video ' + vi1, $event)"
+          :key="'vi1' + index"
           alt=""
+          :ref="'vi1' + index"
           muted
-          autoplay
           preload="auto"
           playsinline
         >
           <source
-            :src="`https://walkerstory.com/wp-content/uploads/2021/01/${v1}.mp4`"
+            :src="`https://walkerstory.com/assets/media/videos/mp4/${vi1}.mp4`"
             type="video/mp4"
           />
         </video>
 
         <video
-          autoplay
           @canplaythrough="loadStage1('intro', $event)"
           alt=""
           muted
@@ -57,34 +55,34 @@
           playsinline
         >
           <source
-            src="https://walkerstory.com/wp-content/uploads/2021/01/intro.mp4"
+            src="https://walkerstory.com/assets/media/videos/mp4/intro.mp4"
             type="video/mp4"
           />
         </video>
 
         <video
-          autoplay
           @canplaythrough="loadStage1('song', $event)"
           alt=""
           muted
-          preload="auto"
+          preload="metadata"
           playsinline
         >
           <source
-            src="https://walkerstory.com/wp-content/uploads/2021/01/song.mp4"
+            src="https://walkerstory.com/assets/media/videos/mp4/song.mp4"
             type="video/mp4"
           />
         </video>
       </div>
       <!-- stage 2 -->
-      <div class="hidden" v-if="stage1Loaded">
+      <div class="hidden" v-if="false">
+        <!-- <div class="hidden" v-if="stage1Loaded"> -->
         <video
           v-for="(v2, index) in 5"
           @canplaythrough="loadStage2('video ' + (v2 + 4))"
           :key="'V2' + index"
           alt=""
           muted
-          preload="auto"
+          preload="metadata"
           playsinline
         >
           <!-- <source
@@ -104,7 +102,7 @@
           :key="'t' + index"
           alt=""
           muted
-          preload="auto"
+          preload="metadata"
         >
           <source
             :src="`https://walkerstory.com/wp-content/uploads/2021/01/th${t}.mp4`"
@@ -202,6 +200,9 @@ export default {
   },
   mounted() {
     console.log('fuck')
+    if (this.$browserDetect.isSafari) {
+      this.$store.commit('setLoadedTrue')
+    }
     this.isLoaded = false
     this.stage1Count = 0
     this.stage2Count = 0
@@ -213,10 +214,10 @@ export default {
   },
 
   methods: {
-    loadStage1() {
-      // console.log(e)
+    loadStage1(e, event) {
+      console.log(e)
       // console.log(event.target.readyState)
-      if (event.target.readyState > 2) {
+      if (event.target.readyState > 3) {
         this.stage1Count++
         if (this.stage1Count === 6) {
           this.stage1Loaded = true

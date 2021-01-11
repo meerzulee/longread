@@ -50,6 +50,9 @@ module.exports = {
       inset: {
         '1/2': '50%',
       },
+      zIndex: {
+        '-99': '-99'
+      },
       translate: {
         '-1/2': '-50%'
       },
