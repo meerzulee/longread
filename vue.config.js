@@ -1,9 +1,7 @@
 // vue.config.js
 
 module.exports = {
+    publicPath: '/longread/',
     assetsDir: './assets/',
     filenameHashing: false,
-    publicPath: process.env.NODE_ENV === 'production'
-        ? '/longread'
-        : '/'
 }

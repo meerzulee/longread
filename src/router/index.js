@@ -107,9 +107,10 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'hash',
-  base: '/longread/',
+  mode: 'history',
+  base: '/longread',
   routes
 })
+
 
 export default router
