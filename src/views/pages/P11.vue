@@ -23,10 +23,12 @@
 
     <div class="relative my-12 ml-24 tablet:ml-56 flex flex-col justify-start">
       <Header>
-        <template v-slot:name>Айдай</template>
-        представительница ЛГБТ-сообщества, 21 год
+        <template v-slot:name>
+          <span>{{ $t('page11name') }}</span></template
+        >
+        <span>{{ $t('page11desc') }}</span>
       </Header>
-      <Story class="mt-20" :storyText="storyText" noScroll />
+      <Story class="mt-20" :storyText="$t('page11storytext')" noScroll />
     </div>
   </div>
 </template>
@@ -38,7 +40,9 @@ export default {
   components: { Header, Story },
   data() {
     return {
-      storyText: `- Мне не нравится ходить в ЛГБТ-клуб постоянно, потому что публика там иногда может харассить, постоянно происходят какие-то драки, стычки и скандалы. 
+      page11name: 'Айдай',
+      page11desc: `представительница ЛГБТ-сообщества, 21 год`,
+      page11storyText: `- Мне не нравится ходить в ЛГБТ-клуб постоянно, потому что публика там иногда может харассить, постоянно происходят какие-то драки, стычки и скандалы. 
       
 Почему я все-таки туда хожу? Мне нравится ощущение того, что люди счастливы. Например, парень сидит на коленях у другого парня, они целуются и вообще все окей. Мне нравится ходить в клуб только за ощущением того, что люди свободны.
 `,

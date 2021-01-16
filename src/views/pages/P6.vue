@@ -27,10 +27,10 @@
       class="relative flex flex-col justify-between my-16 ml-360p desktop:ml-32"
     >
       <Header>
-        <template v-slot:name>Евгения</template>
-        дружественная адвокатесса, 34 года
+        <template v-slot:name>{{ $t('page6name') }}</template>
+        {{ $t('page6desc') }}
       </Header>
-      <Story :storyText="storyText" />
+      <Story :storyText="$t('page6storytext')" />
     </div>
   </div>
 </template>
@@ -44,7 +44,9 @@ export default {
   components: { Header, Story, BgVideo },
   data() {
     return {
-      storyText: `- Сколько примерно к вам поступает просьб о помощи в месяц?
+      page6name: 'Евгения',
+      page6desc: `дружественная адвокатесса, 34 года`,
+      page6storyText: `- Сколько примерно к вам поступает просьб о помощи в месяц?
 
 - Ну, больше десяти точно, в зависимости от времени. Потому что если это окончание квартала, то милиция начинает вымогать деньги. Также больше задержаний происходит, к примеру, в какие-то предпраздничные дни. Я могу уже предположить, что такой-то день будут задержания, будут останавливать на улице и проверять документы. 
 

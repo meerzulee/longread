@@ -15,19 +15,14 @@
     >
       <p
         class="p-8 text-2xl desktop:text-xl font-bold leading-9 tracking-wider text-left text-white bg-text"
-      >
-        Идите прямо, затем поверните налево, затем еще раз налево. Увидите
-        лестницу вниз, спускайтесь. Там темно, так что будьте аккуратнее. Лучше
-        придерживаться за стену по правую руку и подсветить фонариком. Чтобы
-        открыть дверь, немного сильнее толкните. В воздухе пахнет дымом, разными
-        духами и алкоголем...
-      </p>
+        v-html="$t('introtext')"
+      ></p>
       <div>
         <a
           @click="slideUp()"
           class="flex items-center justify-center cursor-pointer px-10 py-5 text-lg font-semibold relative laptop:mt-4 leading-relaxed mt-9 rounded-xl tb"
         >
-          Продолжить
+          {{ $t('introbutton') }}
         </a>
       </div>
     </div>
@@ -38,6 +33,16 @@
 // import { vueVimeoPlayer } from 'vue-vimeo-player'
 
 export default {
+  data() {
+    return {
+      IntroText: ` Идите прямо, затем поверните налево, затем еще раз налево. Увидите
+        лестницу вниз, спускайтесь. Там темно, так что будьте аккуратнее. Лучше
+        придерживаться за стену по правую руку и подсветить фонариком. Чтобы
+        открыть дверь, немного сильнее толкните. В воздухе пахнет дымом, разными
+        духами и алкоголем...`,
+      IntroButton: 'Продолжить',
+    }
+  },
   components: {
     // vueVimeoPlayer,
   },

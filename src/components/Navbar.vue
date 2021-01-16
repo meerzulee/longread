@@ -67,6 +67,7 @@
         v-if="toggleMenu"
         class="absolute flex z-40 top-0 w-full desktop:pb-20 bg-primary-dark desktop:items-center navbar-menu"
       >
+        <LocaleSwitcher @click="toggleMenu = !toggleMenu" />
         <div class="navbar-container mx-auto h-auto mt-20 flex flex-wrap">
           <div
             class="navbar-rect my-10 desktop:my-4 mx-2 cursor-pointer group rounded-md text-white hover:bg-secondary flex justify-center items-center"
@@ -124,95 +125,105 @@
 </template>
 
 <script>
+import LocaleSwitcher from '@/components/LocaleSwitcher.vue'
+
 export default {
+  components: {
+    LocaleSwitcher,
+  },
   data() {
     return {
       toggleMenu: false,
 
       items: [
-        { text: 'Пролог', textHover: 'Пролог', video: '', link: 'Intro' },
+        {
+          text: this.$t('navintro'),
+          textHover: this.$t('navintro'),
+          video: '',
+          link: 'Intro',
+        },
         {
           text: '',
-          textHover: 'Женя Юрьевна',
+          textHover: this.$t('navpage1'),
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th1.mp4',
           link: 'Page1',
         },
         {
           text: '',
-          textHover: 'Диана Алиева',
+          textHover: this.$t('navpage2'),
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th2.mp4',
           link: 'Page2',
         },
         {
           text: '',
-          textHover: 'Наталья Викторовна',
+          textHover: this.$t('navpage3'),
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th3.mp4',
           link: 'Page3',
         },
         {
           text: '',
-          textHover: 'Сулейма',
+          textHover: this.$t('navpage4'),
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th4.mp4',
           link: 'Page4',
         },
         {
           text: '',
-          textHover: 'Диас',
+          textHover: this.$t('navpage5'),
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th5.mp4',
           link: 'Page5',
         },
         {
           text: '',
-          textHover: 'Евгения',
+          textHover: this.$t('navpage6'),
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th6.mp4',
           link: 'Page6',
         },
         {
           text: '',
-          textHover: 'Адилет',
+          textHover: this.$t('navpage7'),
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th7.mp4',
           link: 'Page7',
         },
         {
           text: '',
-          textHover: 'Евгений',
+          textHover: this.$t('navpage8'),
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th8.mp4',
           link: 'Page8',
         },
         {
           text: '',
-          textHover: 'Аскар',
+          textHover: this.$t('navpage9'),
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th9.mp4',
           link: 'Page9',
         },
 
         {
           text: '',
-          textHover: 'Олеся',
+          textHover: this.$t('navpage10'),
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th10.mp4',
           link: 'Page10',
         },
         {
           text: '',
-          textHover: 'Айдай',
+          textHover: this.$t('navpage11'),
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th11.mp4',
           link: 'Page11',
         },
         {
           text: '',
-          textHover: 'ЛГБТ-активист с юга',
+          textHover: this.$t('navpage12'),
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th12.mp4',
           link: 'Page12',
         },
         {
           text: '',
-          textHover: 'ЛГБТ-активист с юга',
+          textHover: this.$t('navpage13'),
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th13.mp4',
           link: 'Page13',
         },
         {
-          text: 'Заключение',
-          textHover: 'Заключение',
+          text: this.$t('navoutro'),
+          textHover: this.$t('navoutro'),
           video: '',
           link: 'Outro',
         },

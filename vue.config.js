@@ -1,7 +1,7 @@
 // vue.config.js
 
 module.exports = {
-    publicPath: '/longread/',
+    publicPath: '/ne-pod-etim-solncem/',
     assetsDir: './assets/',
     filenameHashing: false,
 }

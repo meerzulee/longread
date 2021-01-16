@@ -1,16 +1,9 @@
 <template>
   <div id="app" class="relative">
+    <LocaleSwitcher v-if="this.$route.name == 'Intro'" />
     <Preloader />
     <Navbar />
-
-    <transition
-      :name="$store.state.pageTransition.name"
-      :mode="$store.state.pageTransition.mode"
-      v-on:after-enter="afterEnter"
-      v-on:after-leave="afterLeave"
-    >
-      <router-view class="transition" />
-    </transition>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -18,25 +11,20 @@
 // import Store from './store/index'
 import Navbar from '@/components/Navbar.vue'
 import Preloader from '@/components/Preloader.vue'
-
+import LocaleSwitcher from '@/components/LocaleSwitcher.vue'
+//
+// let messages = {}
 export default {
   name: 'App',
+  data() {
+    return {}
+  },
   components: {
     Navbar,
     Preloader,
+    LocaleSwitcher,
   },
-
-  methods: {
-    afterEnter: () => {
-      window.scrollTo(0, 0)
-    },
-    afterLeave: () => {
-      // Store.commit('setPageTransition', 'default')
-    },
-    defocusApp() {
-      this.$root.$emit('defocusApp') // emitted event
-    },
-  },
+  mounted() {},
 }
 </script>
 <style >

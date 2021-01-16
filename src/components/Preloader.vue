@@ -203,6 +203,8 @@ export default {
     if (this.$browserDetect.isSafari) {
       this.$store.commit('setLoadedTrue')
     }
+    this.$i18n.messages.ru.kek = 'Fuck'
+    console.log(this.$i18n.messages.ru.kek)
     this.isLoaded = false
     this.stage1Count = 0
     this.stage2Count = 0

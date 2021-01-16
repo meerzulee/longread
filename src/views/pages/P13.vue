@@ -25,12 +25,9 @@
       class="relative my-12 mr-64 pr-56 tablet:pr-64 flex flex-col justify-between"
     >
       <Header>
-        <template v-slot:name
-          >ЛГБТ-активист с юга <br />
-          Кыргызстана</template
-        >
+        <template v-slot:name><span v-html="$t('page13name')"></span></template>
       </Header>
-      <Story class="-mt-8 desktop:mt-2" :storyText="storyText" />
+      <Story class="-mt-8 desktop:mt-2" :storyText="$t('page13storytext')" />
     </div>
   </div>
 </template>
@@ -42,7 +39,10 @@ export default {
   components: { Header, Story },
   data() {
     return {
-      storyText: `Про офис и безопасное пространство  
+      page13name: `ЛГБТ-активист с юга <br />
+          Кыргызстана`,
+      page13desc: ``,
+      page13storyText: `Про офис и безопасное пространство  
 
 Я бы так сказал, если я живу 25 % времени с семьей, а 75 % - с инициативной группой, то несмотря на то, сколько лет я женат, я больше живу сообществом. Да, есть любовь к семье, но не такая, как к сообществу.
 
