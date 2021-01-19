@@ -203,8 +203,7 @@ export default {
     if (this.$browserDetect.isSafari) {
       this.$store.commit('setLoadedTrue')
     }
-    this.$i18n.messages.ru.kek = 'Fuck'
-    console.log(this.$i18n.messages.ru.kek)
+
     this.isLoaded = false
     this.stage1Count = 0
     this.stage2Count = 0
@@ -221,7 +220,7 @@ export default {
       // console.log(event.target.readyState)
       if (event.target.readyState > 3) {
         this.stage1Count++
-        if (this.stage1Count === 6) {
+        if (this.stage1Count >= 5) {
           this.stage1Loaded = true
           console.log('Stage 1 completed')
           this.check()

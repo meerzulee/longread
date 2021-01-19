@@ -1,21 +1,20 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
+
 RewriteBase /
-RewriteRule ^index\.php$ - [C]
+RewriteRule ^index\.php$ - [NC]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [C]
+RewriteRule . /index.php [NC]
 
 
-RewriteBase /longread/
-RewriteRule ^index\.html$ - [L]
+RewriteBase /ne-pod-etim-solncem
+RewriteRule ^ne-pod-etim-solncem/index\.html$ - [L]
+RewriteCond %{REQUEST_URI} ^/ne-pod-etim-solncem/ [NC]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /longread/index.html [L]
-
-
-
+RewriteRule . /ne-pod-etim-solncem/index.html [L]
 
 
 </IfModule>

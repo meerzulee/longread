@@ -84,13 +84,13 @@
               alt=""
             />
             <p v-if="item.text" class="group-hover:hidden text-4xl font-bold">
-              {{ item.text }}
+              {{ comp(item.text) }}
             </p>
             <p
               class="font-bold hidden group-hover:block"
               :class="[item.text ? 'text-4xl' : 'text-lg']"
             >
-              {{ item.textHover }}
+              {{ comp(item.textHover) }}
             </p>
           </div>
         </div>
@@ -137,93 +137,93 @@ export default {
 
       items: [
         {
-          text: this.$t('navintro'),
-          textHover: this.$t('navintro'),
+          text: 'navintro',
+          textHover: 'navintro',
           video: '',
           link: 'Intro',
         },
         {
           text: '',
-          textHover: this.$t('navpage1'),
+          textHover: 'navpage1',
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th1.mp4',
           link: 'Page1',
         },
         {
           text: '',
-          textHover: this.$t('navpage2'),
+          textHover: 'navpage2',
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th2.mp4',
           link: 'Page2',
         },
         {
           text: '',
-          textHover: this.$t('navpage3'),
+          textHover: 'navpage3',
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th3.mp4',
           link: 'Page3',
         },
         {
           text: '',
-          textHover: this.$t('navpage4'),
+          textHover: 'navpage4',
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th4.mp4',
           link: 'Page4',
         },
         {
           text: '',
-          textHover: this.$t('navpage5'),
+          textHover: 'navpage5',
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th5.mp4',
           link: 'Page5',
         },
         {
           text: '',
-          textHover: this.$t('navpage6'),
+          textHover: 'navpage6',
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th6.mp4',
           link: 'Page6',
         },
         {
           text: '',
-          textHover: this.$t('navpage7'),
+          textHover: 'navpage7',
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th7.mp4',
           link: 'Page7',
         },
         {
           text: '',
-          textHover: this.$t('navpage8'),
+          textHover: 'navpage8',
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th8.mp4',
           link: 'Page8',
         },
         {
           text: '',
-          textHover: this.$t('navpage9'),
+          textHover: 'navpage9',
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th9.mp4',
           link: 'Page9',
         },
 
         {
           text: '',
-          textHover: this.$t('navpage10'),
+          textHover: 'navpage10',
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th10.mp4',
           link: 'Page10',
         },
         {
           text: '',
-          textHover: this.$t('navpage11'),
+          textHover: 'navpage11',
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th11.mp4',
           link: 'Page11',
         },
         {
           text: '',
-          textHover: this.$t('navpage12'),
+          textHover: 'navpage12',
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th12.mp4',
           link: 'Page12',
         },
         {
           text: '',
-          textHover: this.$t('navpage13'),
+          textHover: 'navpage13',
           video: 'https://walkerstory.com/wp-content/uploads/2021/01/th13.mp4',
           link: 'Page13',
         },
         {
-          text: this.$t('navoutro'),
-          textHover: this.$t('navoutro'),
+          text: 'navoutro',
+          textHover: 'navoutro',
           video: '',
           link: 'Outro',
         },
@@ -286,6 +286,9 @@ export default {
     },
   },
   methods: {
+    comp(param) {
+      return this.$t(param)
+    },
     slideBack() {
       this.$store.commit('setPageTransition', this.prevT)
       this.$router.push({
@@ -336,7 +339,7 @@ export default {
 <style >
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 1.7s;
+  transition: opacity 1.5s;
 }
 .fade-enter,
 .fade-leave-to {

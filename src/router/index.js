@@ -20,15 +20,19 @@ import P14 from '@/views/pages/P14.vue'
 import Outro from '@/views/Outro.vue'
 import RouterView from '@/views/RouterView.vue'
 import { i18n } from '@/main.js';
-const axios = require('axios');
 Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/',
+    redirect: '/ru',
+  },
+  {
+
     path: "/:lang/",
     component: RouterView,
     beforeEnter(to, from, next) {
-
+      document.title = 'Не под этим солнцем';
       const lang = to.params.lang;
       if (!["en", "ru"].includes(lang)) return next("ru");
       if (i18n.locale !== lang) {
@@ -129,10 +133,7 @@ const router = new VueRouter({
   base: '/ne-pod-etim-solncem',
   routes
 })
-router.beforeEach((to, from, next) => {
-  document.title = 'Не под этим солнцем';
-  next();
-});
+
 
 
 export default router
