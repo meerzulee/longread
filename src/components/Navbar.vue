@@ -83,11 +83,14 @@
               :src="item.video"
               alt=""
             />
-            <p v-if="item.text" class="group-hover:hidden text-4xl font-bold">
+            <p
+              v-if="item.text"
+              class="group-hover:hidden text-center text-4xl font-bold"
+            >
               {{ comp(item.text) }}
             </p>
             <p
-              class="font-bold hidden group-hover:block"
+              class="font-bold hidden text-center group-hover:block"
               :class="[item.text ? 'text-4xl' : 'text-lg']"
             >
               {{ comp(item.textHover) }}

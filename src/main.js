@@ -46,6 +46,9 @@ new Vue({
           if (element.acf.language == 'en') {
             vm.$i18n.setLocaleMessage('en', { ...element.acf })
           }
+          if (element.acf.language == 'kg') {
+            vm.$i18n.setLocaleMessage('kg', { ...element.acf })
+          }
         })
       })
 

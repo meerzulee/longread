@@ -9,9 +9,9 @@
           <path d="M0 0h24v24H0z" fill="none" />
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="#000" />
         </svg>-->
-
+      <!-- ru -->
       <svg
-        v-if="!flag"
+        v-if="$i18n.locale === 'kg'"
         class="w-full"
         version="1.1"
         id="Capa_1"
@@ -27,8 +27,16 @@
         <rect style="fill: #f0f0f0" width="512" height="170.663" />
         <rect y="341.337" style="fill: #d80027" width="512" height="170.663" />
       </svg>
+      <!-- kg -->
+      <img
+        v-if="$i18n.locale === 'en'"
+        src="@/assets/icons/kg.png"
+        class="w-full"
+        alt=""
+      />
+      <!-- english -->
       <svg
-        v-if="flag"
+        v-if="$i18n.locale === 'ru'"
         class="w-full"
         version="1.1"
         id="Capa_1"
@@ -134,12 +142,16 @@ export default {
     changeLocale() {
       if (this.$i18n.locale === 'ru') {
         this.$i18n.locale = 'en'
-        console.log(this.$route.path)
+        // console.log(this.$route.path)
         this.$router.replace(this.$route.path.replace(/ru/i, 'en'))
+      } else if (this.$i18n.locale === 'en') {
+        this.$i18n.locale = 'kg'
+        // console.log(this.$route.path)
+        this.$router.replace(this.$route.path.replace(/en/i, 'kg'))
       } else {
         this.$i18n.locale = 'ru'
-        console.log(this.$route.path)
-        this.$router.replace(this.$route.path.replace(/en/i, 'ru'))
+        // console.log(this.$route.path)
+        this.$router.replace(this.$route.path.replace(/kg/i, 'ru'))
       }
     },
   },

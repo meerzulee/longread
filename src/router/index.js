@@ -34,7 +34,7 @@ const routes = [
     beforeEnter(to, from, next) {
       document.title = 'Не под этим солнцем';
       const lang = to.params.lang;
-      if (!["en", "ru"].includes(lang)) return next("ru");
+      if (!["en", "ru", "kg"].includes(lang)) return next("ru");
       if (i18n.locale !== lang) {
         i18n.locale = lang;
       }
