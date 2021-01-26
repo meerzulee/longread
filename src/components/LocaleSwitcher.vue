@@ -153,6 +153,10 @@ export default {
         // console.log(this.$route.path)
         this.$router.replace(this.$route.path.replace(/kg/i, 'ru'))
       }
+
+      if (this.$route.name == 'Intro') {
+        window.location.reload()
+      }
     },
   },
 }

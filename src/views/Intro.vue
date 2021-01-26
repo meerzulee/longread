@@ -4,10 +4,7 @@
       :src="require('@/assets/videos/intro.mp4')"
       class="object-center"
     /> -->
-    <BgVideo
-      src="https://walkerstory.com/assets/media/videos/mp4/intro.mp4"
-      class="object-center"
-    />
+    <BgVideo :src="intro_video" class="object-center" />
     <!-- <BgVideo :src="require('@/assets/videos/webm/intro.webm')" :end="0.65" /> -->
 
     <div
@@ -43,8 +40,16 @@ export default {
       IntroButton: 'Продолжить',
     }
   },
-  components: {
-    // vueVimeoPlayer,
+  computed: {
+    intro_video() {
+      if (this.$i18n.locale === 'ru') {
+        return 'https://walkerstory.com/assets/media/videos/mp4/intro.mp4'
+      } else if (this.$i18n.locale === 'en') {
+        return 'https://walkerstory.com/assets/media/videos/intro_en.mp4'
+      } else {
+        return 'https://walkerstory.com/assets/media/videos/intro_kg.mp4'
+      }
+    },
   },
   mounted() {
     window.addEventListener('keyup', this.start)
